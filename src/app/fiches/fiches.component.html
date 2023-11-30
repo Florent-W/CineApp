@@ -1,0 +1,6 @@
+<section class="fiche_container" *ngFor="let content of fichesContent; let i = index">
+    <h4 class="fiche_label" id="fiche_{{content.id}}">
+        <a (click)="openFiche(content.id)"><b>{{content.title}}</b></a>
+    </h4>
+    <div (click)="openFiche(content.id)">{{content.category}}</div>
+</section>

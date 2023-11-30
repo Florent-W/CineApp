@@ -1,0 +1,78 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "titre": "Test",
+      "contenu": "bbbbbbbbbbbbbbbbb"
+    },
+    {
+      "id": 2,
+      "titre": "Test2",
+      "contenu": "ccccccccccc"
+    }
+  ],
+  "fiches": [
+    {
+      "id": 1,
+      "title": "The Last of Us (2023)",
+      "category": "Séries TV",
+      "duration": "59 min",
+      "firstAired": "16 janvier 2023",
+      "genres": "Drame, Aventure, Épouvante-horreur",
+      "platforms": "HBO, Prime Video"
+    },
+    {
+      "id": 2,
+      "title": "Acharnés (2023)",
+      "category": "Séries TV",
+      "duration": "36 min",
+      "firstAired": "6 avril 2023",
+      "genres": "Comédie dramatique",
+      "platform": "Netflix"
+    },
+    {
+      "id": 3,
+      "title": "Silo (2023)",
+      "category": "Séries TV",
+      "duration": "47 min",
+      "firstAired": "5 mai 2023",
+      "genres": "Drame, Science-fiction",
+      "platform": "Apple TV+"
+    },
+    {
+      "title": "b",
+      "category": "film",
+      "duration": null,
+      "firstAired": "2023-11-28",
+      "genres": "a",
+      "platforms": "b",
+      "id": 4
+    },
+    {
+      "title": "a",
+      "category": "film",
+      "duration": "12 min",
+      "firstAired": "2023-11-14",
+      "genres": "a",
+      "platforms": "b",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user"
+    },
+    {
+      "username": "Florent",
+      "password": "test",
+      "id": 3
+    }
+  ]
+}
