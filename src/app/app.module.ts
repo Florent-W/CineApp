@@ -13,6 +13,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FichesComponent } from './fiches/fiches.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
     RegisterComponent,
     ArticlesComponent,
     FichesComponent,
-    AjoutficheComponent
+    AjoutficheComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,

@@ -5,17 +5,17 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthService {
-  user: { id: number; username: string; } | undefined;
+  user: { id: number; username: string; email?: string } | undefined;
 
   constructor(private http: HttpClient) { }
 
-  addUser(user: { username: string; password: string; }) {
+  addUser(user: { username: string; password: string; email: string}) {
     return this.http.post('http://localhost:3000/users', user).subscribe();
   }
 
   login(user: { username: string; password: string; }) {
     return this.http.get('http://localhost:3000/users?username=' + user.username + '&password=' + user.password);
-  }
+  }  
 
   logout() {
     this.user = undefined;
@@ -44,6 +44,7 @@ export class AuthService {
   }
 
   private getSavedUserInfo() {
+    console.log(this.getSavedUser())
     return this.http.get('http://localhost:3000/users?id=' + this.getSavedUser());
   }
 }

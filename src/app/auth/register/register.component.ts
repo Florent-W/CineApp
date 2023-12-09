@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
       username: new FormControl('', Validators.required),
       password: new FormControl('', [Validators.required, Validators.minLength(4)]),
       confirmPassword: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.minLength(1)])
     }, { validators: this.checkPasswords });
   }
 
@@ -29,7 +30,8 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) return;
     this.authService.addUser({
       username: this.registerForm.value.username,
-      password: this.registerForm.value.password
+      password: this.registerForm.value.password,
+      email: this.registerForm.value.email
     });
     this.router.navigate(['/login']);
   }
@@ -44,6 +46,7 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.errors?.['required']) return 'Les champs sont obligatoires';
     if (!!this.registerForm.controls?.['password']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.registerForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
     if (this.registerForm.errors?.['missMatch']) return 'Les mots de passe ne correspondent pas';
+    if (!!this.registerForm.controls?.['email']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.registerForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
     return 'Un problème est survenu';
   }
 }

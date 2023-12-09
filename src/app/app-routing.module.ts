@@ -6,6 +6,7 @@ import { RegisterComponent } from "./auth/register/register.component";
 import { ArticlesComponent } from './articles/articles.component';
 import { FichesComponent } from './fiches/fiches.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   {
@@ -39,7 +40,12 @@ const routes: Routes = [
   {
     path: 'ajoutFiche',
     component: AjoutficheComponent
-  }
+  },
+  {
+    path: 'profil',
+    component: ProfilComponent
+  },
+
 ];
 
 @NgModule({
