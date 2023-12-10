@@ -285,6 +285,17 @@
       ],
       "platforms": "",
       "id": 30
+    },
+    {
+      "title": "Spider man",
+      "category": "film",
+      "duration": 8,
+      "firstAired": "2000-05-05T06:21",
+      "genres": [
+        0
+      ],
+      "platforms": "Netflix",
+      "id": 31
     }
   ],
   "users": [

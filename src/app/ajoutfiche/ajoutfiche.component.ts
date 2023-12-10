@@ -32,10 +32,9 @@ export class AjoutficheComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    console.log(this.ficheForm.value);
-
     if (this.ficheForm.valid) {
       this.fichesService.addFiche(this.ficheForm.value as any);
+      this.fichesService.getFiches();
       this.removeDomElement();
     }
   }
