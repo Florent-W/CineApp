@@ -1,0 +1,9 @@
+<div *ngIf="fiche" class="fiche-details">
+    <h2>{{ fiche.title }}</h2>
+    <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
+    <p><strong>Catégorie :</strong> {{ fiche.category }}</p>
+    <p><strong>Durée :</strong> {{ fiche.duration }}</p>
+    <p><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
+    <p><strong>Genres :</strong> {{ fiche.genres }}</p>
+    <p><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
+  </div>  

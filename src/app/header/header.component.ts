@@ -7,6 +7,7 @@ import { AuthService } from "../auth/auth.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  dropdownOpen = false;  
 
   constructor(private authService: AuthService) { }
 
@@ -21,4 +22,7 @@ export class HeaderComponent {
   get getUsername() {
     return this.authService.user?.username || '';
   }
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }  
 }

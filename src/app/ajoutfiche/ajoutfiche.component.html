@@ -1,4 +1,5 @@
 <div class="fiche-form-container">
+    <h1>Ajout d'une fiche</h1>
     <form [formGroup]="ficheForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="title">Titre</label>
@@ -6,10 +7,15 @@
         </div>
 
         <div class="form-group">
+            <label for="image">URL de l'Image</label>
+            <input type="text" class="form-control" id="image" formControlName="image">
+        </div>
+
+        <div class="form-group">
             <label for="category">Catégorie</label>
             <select class="form-control" id="category" formControlName="category">
-                <option value="film">Film</option>
-                <option value="serie">Série</option>
+                <option value="Film">Film</option>
+                <option value="Série">Série</option>
             </select>
         </div>
 

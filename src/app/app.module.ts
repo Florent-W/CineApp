@@ -14,6 +14,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { FichesComponent } from './fiches/fiches.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
+import { FicheComponent } from './fiche/fiche.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfilComponent } from './profil/profil.component';
     ArticlesComponent,
     FichesComponent,
     AjoutficheComponent,
-    ProfilComponent
+    ProfilComponent,
+    FicheComponent
   ],
   imports: [
     BrowserModule,

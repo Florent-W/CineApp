@@ -5,6 +5,7 @@ import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
 import { ArticlesComponent } from './articles/articles.component';
 import { FichesComponent } from './fiches/fiches.component';
+import { FicheComponent } from './fiche/fiche.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'fiches/:idFiche',
-    component: FichesComponent
+    component: FicheComponent
   },
   {
     path: 'ajoutFiche',

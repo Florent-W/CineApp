@@ -10,13 +10,15 @@ import { lengthValidator, minNumberValidator } from '../custom-validators';
 })
 export class AjoutficheComponent {
   ficheForm!: FormGroup;
+  errorMessage: string = '';
 
   constructor(private ficheService: FichesService) { }
 
   ngOnInit(): void {
     this.ficheForm = new FormGroup({
-      'title': new FormControl(null, [Validators.required, lengthValidator(5, 100)]),
-      'category': new FormControl('film', [Validators.required, minNumberValidator(4)]),
+      'title': new FormControl(null, [Validators.required, lengthValidator(3, 100)]),
+      'image': new FormControl(null, [Validators.required, lengthValidator(5, 1500)]),
+      'category': new FormControl(null, [Validators.required, minNumberValidator(4)]),
       'duration': new FormControl(null, [Validators.required, minNumberValidator(5)]),
       'firstAired': new FormControl(null),
       'genres': new FormControl(null),
@@ -25,10 +27,17 @@ export class AjoutficheComponent {
   }
 
   onSubmit(): void {
-    console.log(this.ficheForm.value);
     if (this.ficheForm.valid) {
-      this.ficheService.addFiche(this.ficheForm.value);
-      this.resetForm();
+      this.ficheService.addFiche(this.ficheForm.value)
+      .subscribe(
+        response => {
+          this.resetForm();
+        },
+        error => {
+          this.errorMessage = error;
+          console.log(this.errorMessage);
+        }
+      );
     }
   }
 

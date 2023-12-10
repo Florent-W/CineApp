@@ -3,10 +3,18 @@
     <button>Ciné App</button>
   </h1>
   <div class="header_user">
-    <h2>{{ getUsername }}</h2>
-    <button *ngIf="!isUserConnected; else logoutTemplate" class="btn-secondary" routerLink="/login">Se connecter</button>
-    <ng-template #logoutTemplate>
+    <ng-container *ngIf="isUserConnected; else loginTemplate">
+      <div class="user-actions">
+        <button (click)="toggleDropdown()"><h2>Créer</h2></button>
+        <ul class="dropdown-menu" [class.show]="dropdownOpen">
+          <li><a routerLink="/ajoutFiche">Créer Fiche</a></li>
+        </ul>
+      </div>
+      <h2>{{ getUsername }}</h2>
       <button class="btn-secondary" (click)="logout()" routerLink="/login">Se déconnecter</button>
+    </ng-container>
+    <ng-template #loginTemplate>
+      <button class="btn-secondary" routerLink="/login">Se connecter</button>
     </ng-template>
   </div>
 </header>

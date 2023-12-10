@@ -15,11 +15,12 @@
     {
       "id": 1,
       "title": "The Last of Us (2023)",
-      "category": "Séries TV",
+      "category": "Série",
       "duration": "59 min",
       "firstAired": "16 janvier 2023",
       "genres": "Drame, Aventure, Épouvante-horreur",
-      "platforms": "HBO, Prime Video"
+      "platforms": "HBO, Prime Video",
+      "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg"
     },
     {
       "id": 2,
@@ -28,7 +29,8 @@
       "duration": "36 min",
       "firstAired": "6 avril 2023",
       "genres": "Comédie dramatique",
-      "platform": "Netflix"
+      "platform": "Netflix",
+      "image": "https://www.rts.ch/2023/04/26/12/23/13971537.image?w=640&h=640"
     },
     {
       "id": 3,
@@ -37,25 +39,28 @@
       "duration": "47 min",
       "firstAired": "5 mai 2023",
       "genres": "Drame, Science-fiction",
-      "platform": "Apple TV+"
+      "platform": "Apple TV+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg"
     },
     {
-      "title": "b",
-      "category": "film",
-      "duration": null,
-      "firstAired": "2023-11-28",
-      "genres": "a",
-      "platforms": "b",
-      "id": 4
+      "title": "Super Mario Bros",
+      "image": "https://fr.web.img3.acsta.net/c_310_420/pictures/23/03/20/14/57/4979368.jpg",
+      "category": "Film",
+      "duration": "1h32",
+      "firstAired": "2023-04-05",
+      "genres": "Animation",
+      "platforms": null,
+      "id": 6
     },
     {
-      "title": "a",
-      "category": "film",
-      "duration": "12 min",
-      "firstAired": "2023-11-14",
-      "genres": "a",
-      "platforms": "b",
-      "id": 5
+      "title": "Loki",
+      "image": "https://i.etsystatic.com/18242346/r/il/1c2d51/3186724525/il_570xN.3186724525_ocm2.jpg",
+      "category": "Série",
+      "duration": "2 saisons",
+      "firstAired": "2021-06-09",
+      "genres": "Science-Fiction",
+      "platforms": "Disney+",
+      "id": 7
     }
   ],
   "users": [
