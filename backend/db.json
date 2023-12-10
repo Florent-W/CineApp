@@ -56,6 +56,235 @@
       "genres": "a",
       "platforms": "b",
       "id": 5
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 6
+    },
+    {
+      "title": "Mon super film",
+      "category": "film",
+      "duration": "3",
+      "firstAired": "",
+      "genres": "2",
+      "platforms": "UGC ",
+      "id": 7
+    },
+    {
+      "title": ",içub_-v",
+      "category": "film",
+      "duration": "1",
+      "firstAired": "2023-12-31T01:00",
+      "genres": "1",
+      "platforms": "iunyb",
+      "id": 8
+    },
+    {
+      "title": "fgfgu",
+      "category": "",
+      "duration": "9",
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 9
+    },
+    {
+      "title": "Mon Film",
+      "category": "film",
+      "duration": "5",
+      "firstAired": "2023-12-13T05:11",
+      "genres": [],
+      "platforms": "SuperHero",
+      "id": 10
+    },
+    {
+      "title": "snks",
+      "category": "film",
+      "duration": "5",
+      "firstAired": "2025-02-02T14:02",
+      "genres": [],
+      "platforms": "pkdpd",
+      "id": 11
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 12
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 13
+    },
+    {
+      "title": "dhifo",
+      "category": "film",
+      "duration": "4",
+      "firstAired": "2026-01-02T14:09",
+      "genres": [],
+      "platforms": "^lcppjkc",
+      "id": 14
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 15
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 16
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 17
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 18
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 19
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 20
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 21
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 22
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 23
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 24
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 25
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 26
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": 0,
+      "firstAired": "",
+      "genres": [],
+      "platforms": "",
+      "id": 27
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": "",
+      "firstAired": "",
+      "genres": "",
+      "platforms": "",
+      "id": 28
+    },
+    {
+      "title": "ffjbfbfj",
+      "category": "serie",
+      "duration": "",
+      "firstAired": "",
+      "genres": "",
+      "platforms": "",
+      "id": 29
+    },
+    {
+      "title": "",
+      "category": "",
+      "duration": "",
+      "firstAired": "",
+      "genres": [
+        1,
+        2,
+        3
+      ],
+      "platforms": "",
+      "id": 30
     }
   ],
   "users": [
@@ -73,6 +302,61 @@
       "username": "Florent",
       "password": "test",
       "id": 3
+    },
+    {
+      "username": "abdoula",
+      "password": "azertyuiop",
+      "id": 4
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Comédie"
+    },
+    {
+      "id": 3,
+      "name": "Drame"
+    },
+    {
+      "id": 4,
+      "name": "Science-Fiction"
+    },
+    {
+      "id": 5,
+      "name": "Romance"
+    },
+    {
+      "id": 6,
+      "name": "Thriller"
+    },
+    {
+      "id": 7,
+      "name": "Aventure"
+    },
+    {
+      "id": 8,
+      "name": "Horreur"
+    },
+    {
+      "id": 9,
+      "name": "Fantasy"
+    },
+    {
+      "id": 10,
+      "name": "Mystère"
+    },
+    {
+      "id": 11,
+      "name": "Animation"
+    },
+    {
+      "id": 12,
+      "name": "Comédie romantique"
     }
   ]
 }
