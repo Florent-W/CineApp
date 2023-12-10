@@ -1,11 +1,14 @@
+<button *ngIf="isUserConnected()" (click)="ajouterUneFiche()" class="btn text-right">+</button>
+
 <div class="select-categorie-container" [formGroup]="categorieForm">
+
     <label for="categorieSelect">Catégorie :</label>
     <select id="categorieSelect" formControlName="categorie">
-      <option value="tous">Tous</option>
-      <option value="Film">Films</option>
-      <option value="Série">Séries</option>
+        <option value="tous">Tous</option>
+        <option value="Film">Films</option>
+        <option value="Série">Séries</option>
     </select>
-  </div>
+</div>
 
 <section class="fiche_container" *ngFor="let content of fichesContent; let i = index">
     <div class="fiche_content" (click)="openFiche(content.id)">
