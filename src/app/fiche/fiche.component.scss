@@ -92,3 +92,23 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+
+.liste-notes {
+    margin-bottom: 20px;
+  
+    h3 {
+      color: #2a5885;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        background-color: #f8f8f8;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+    }
+  }

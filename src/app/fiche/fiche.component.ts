@@ -17,6 +17,8 @@ export class FicheComponent {
     commentaire: ['']
   });
 
+  notes: any[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private fichesService: FichesService,
@@ -35,8 +37,14 @@ export class FicheComponent {
         error => {
           console.error('Erreur sur la fiche :', error);
         });
+
+        this.fichesService.getNotesFiche(idFiche).subscribe(notes => {
+          this.notes = notes;
+          console.log(this.notes);
+        });
       }
-    });
+      }
+    );
   }
 
   ajouterAvis() {
@@ -44,10 +52,10 @@ export class FicheComponent {
       const note = parseInt(this.ficheForm.value.note!);
       const idUtilisateur = this.authService.user?.id!;
       const idFiche = this.fiche.id;
-      const commentaire = this.ficheForm.value.commentaire;
+      const commentaire = this.ficheForm.value.commentaire!;
 
       console.log('Note:', note, 'Commentaire:', commentaire);
-      this.fichesService.addNote(note, idFiche, idUtilisateur).subscribe(
+      this.fichesService.addNote(note, idFiche, idUtilisateur, commentaire).subscribe(
         (response) => {
           console.log('Note ajoutée avec succès', response);
         },
