@@ -34,3 +34,61 @@
       }
     }
   }
+
+  .notation-fiche {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-height: 100px;
+      margin-bottom: 20px;
+    }
+  
+    button {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #003d82;
+      }
+    }
+
+    .message-erreur {
+        color: #ff0000;
+        margin-bottom: 15px;
+      }
+  }
+  .btn-accueil {
+    margin: 20px;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(125, 125, 125);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

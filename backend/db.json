@@ -25,7 +25,7 @@
     {
       "id": 2,
       "title": "Acharnés (2023)",
-      "category": "Séries TV",
+      "category": "Série",
       "duration": "36 min",
       "firstAired": "6 avril 2023",
       "genres": "Comédie dramatique",
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "title": "Silo (2023)",
-      "category": "Séries TV",
+      "category": "Série",
       "duration": "47 min",
       "firstAired": "5 mai 2023",
       "genres": "Drame, Science-fiction",
@@ -60,7 +60,13 @@
       "firstAired": "2021-06-09",
       "genres": "Science-Fiction",
       "platforms": "Disney+",
-      "id": 7
+      "id": 7,
+      "notes": [
+        {
+          "idUtilisateur": 4,
+          "note": 5
+        }
+      ]
     }
   ],
   "users": [
