@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
         this.authService.user = {
           id: response[0].id,
           username: response[0].username,
+          imageUrl: response[0].imageUrl,
           email: response[0].email
         };
         this.authService.saveUser();

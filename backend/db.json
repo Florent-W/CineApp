@@ -79,6 +79,13 @@
       "password": "test",
       "email": "test@gmail.com",
       "id": 3
+    },
+    {
+      "username": "Test3",
+      "password": "test",
+      "imageUrl": "https://images.rtl.fr/~c/2000v2000/rtl/www/1219779-obi-wan-kenobi-dans-la-revanche-des-sith.jpg",
+      "email": "test@gmail.com",
+      "id": 4
     }
   ]
 }

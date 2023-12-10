@@ -21,7 +21,8 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.fb.group({
       username: new FormControl('', Validators.required),
       password: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      confirmPassword: new FormControl('', Validators.required),
+      confirmPassword: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      imageUrl: new FormControl('', [Validators.required, Validators.minLength(5)]),
       email: new FormControl('', [Validators.required, Validators.minLength(1)])
     }, { validators: this.checkPasswords });
   }
@@ -31,6 +32,7 @@ export class RegisterComponent implements OnInit {
     this.authService.addUser({
       username: this.registerForm.value.username,
       password: this.registerForm.value.password,
+      imageUrl : this.registerForm.value.imageUrl,
       email: this.registerForm.value.email
     });
     this.router.navigate(['/login']);
@@ -43,10 +45,35 @@ export class RegisterComponent implements OnInit {
   }
 
   get getErrorLabel() {
-    if (this.registerForm.errors?.['required']) return 'Les champs sont obligatoires';
-    if (!!this.registerForm.controls?.['password']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.registerForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
-    if (this.registerForm.errors?.['missMatch']) return 'Les mots de passe ne correspondent pas';
-    if (!!this.registerForm.controls?.['email']?.errors?.['minlength']) return `La longueur minimal pour votre mot de passe est ${this.registerForm.controls?.['password']?.errors?.['minlength']?.requiredLength}`;
+    if (this.registerForm.get('username')?.errors?.['required']) {
+      return 'Le nom d\'utilisateur est obligatoire';
+    }
+    if (this.registerForm.get('password')?.errors?.['required']) {
+      return 'Le mot de passe est obligatoire';
+    }
+    if (this.registerForm.get('password')?.errors?.['minlength']) {
+      return `La longueur minimale pour votre mot de passe est ${this.registerForm.get('password')?.errors?.['minlength']?.requiredLength}`;
+    }
+    if (this.registerForm.get('confirmPassword')?.errors?.['required']) {
+      return 'La confirmation du mot de passe est obligatoire';
+    }
+    if (this.registerForm.get('email')?.errors?.['required']) {
+      return 'L\'email est obligatoire';
+    }
+    if (this.registerForm.get('email')?.errors?.['minlength']) {
+      return `La longueur minimale pour votre email est ${this.registerForm.get('email')?.errors?.['minlength']?.requiredLength}`;
+    } 
+    if (this.registerForm.get('imageUrl')?.errors?.['required']) {
+      return 'L\'URL de l\'image de profil est obligatoire';
+    }
+    if (this.registerForm.get('imageUrl')?.errors?.['minlength']) {
+      return `La longueur minimale pour l\'URL de l'image de profil est ${this.registerForm.get('imageUrl')?.errors?.['minlength']?.requiredLength}`;
+    }
+    if (this.registerForm.errors?.['missMatch']) {
+      return 'Les mots de passe ne correspondent pas';
+    }
+  
+    // Message par défaut si aucune autre erreur n'est trouvée
     return 'Un problème est survenu';
   }
 }

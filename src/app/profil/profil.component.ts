@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfilComponent {
   pseudo: string | undefined;
+  imageUrl: string | undefined;
   email: string | undefined;
 
   constructor(private authService: AuthService, private router: Router) { }
@@ -16,6 +17,7 @@ export class ProfilComponent {
   ngOnInit(): void {
     if (this.authService.isUserConnected()) {
       this.pseudo = this.authService.user?.username;
+      this.imageUrl = this.authService.user?.imageUrl;
       this.email = this.authService.user?.email;
       console.log(this.authService)
     }

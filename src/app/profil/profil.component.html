@@ -1,4 +1,11 @@
-<div>
-    <h2>Pseudo: {{ pseudo }}</h2>
-    <h2>Email: {{ email }}</h2>
+<div class="profil-container">
+  <div class="profil-header">
+    <img src="{{ imageUrl }}" alt="Image de profil" class="profil-image">
+    <h1>{{ pseudo }}</h1>
   </div>
+  <div class="profil-details">
+    <h2>Informations du Profil</h2>
+    <p><strong>Pseudo : </strong>{{ pseudo }}</p>
+    <p><strong>Email :</strong> {{ email }}</p>
+  </div>
+</div>

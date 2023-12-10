@@ -10,7 +10,7 @@
           <li><a routerLink="/ajoutFiche">Créer Fiche</a></li>
         </ul>
       </div>
-      <h2>{{ getUsername }}</h2>
+      <h2 routerLink="/profil">{{ getUsername }}</h2>
       <button class="btn-secondary" (click)="logout()" routerLink="/login">Se déconnecter</button>
     </ng-container>
     <ng-template #loginTemplate>
