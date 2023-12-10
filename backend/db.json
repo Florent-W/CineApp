@@ -20,17 +20,24 @@
       "firstAired": "16 janvier 2023",
       "genres": "Drame, Aventure, Épouvante-horreur",
       "platforms": "HBO, Prime Video",
-      "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg"
+      "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg",
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Film Genial"
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Acharnés (2023)",
+      "title": "Wandavision",
       "category": "Série",
-      "duration": "36 min",
-      "firstAired": "6 avril 2023",
-      "genres": "Comédie dramatique",
-      "platform": "Netflix",
-      "image": "https://www.rts.ch/2023/04/26/12/23/13971537.image?w=640&h=640"
+      "duration": "41 min",
+      "firstAired": "15 Janvier 2021",
+      "genres": "Sitcom / Super Héros",
+      "platform": "Disney+",
+      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg"
     },
     {
       "id": 3,
@@ -67,6 +74,29 @@
           "note": 5
         }
       ]
+    },
+    {
+      "title": "Mon Film",
+      "image": null,
+      "category": null,
+      "duration": null,
+      "firstAired": null,
+      "genres": null,
+      "platforms": null,
+      "id": 8
+    },
+    {
+      "title": "Ma nouvelle fiche avec Refecth",
+      "image": "https://placehold.co/150x225",
+      "category": "Série",
+      "duration": 6,
+      "firstAired": "2023-12-14",
+      "genres": [
+        "Comédie",
+        "Drame"
+      ],
+      "platforms": "netflix",
+      "id": 9
     }
   ],
   "users": [
@@ -92,6 +122,11 @@
       "imageUrl": "https://images.rtl.fr/~c/2000v2000/rtl/www/1219779-obi-wan-kenobi-dans-la-revanche-des-sith.jpg",
       "email": "test@gmail.com",
       "id": 4
+    },
+    {
+      "username": "abdoula",
+      "password": "azertyuiop",
+      "id": 5
     }
   ]
 }

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ArticlesComponent } from './articles/articles.component';
@@ -15,6 +15,7 @@ import { FichesComponent } from './fiches/fiches.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 import { FicheComponent } from './fiche/fiche.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +29,17 @@ import { FicheComponent } from './fiche/fiche.component';
     FichesComponent,
     AjoutficheComponent,
     ProfilComponent,
-    FicheComponent
+    FicheComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

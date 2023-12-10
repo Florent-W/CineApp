@@ -1,0 +1,12 @@
+<div [id]="'modal'+'-'+variant"
+    class="modal-overlay absolute top-0 w-full h-full bg-black bg-opacity-40  p-5 z-50 flex justify-center">
+    <div class="modal-container bg-white w-[700px] max-w-ful overflow-y-auto  rounded-md place-self-center ">
+        <div class="modal-header p-4 flex justify-between  border-b-2 justify-items-center">
+            <h4 class="modal-title text-lg font-bold">{{ title }}</h4>
+            <button class="close-button border-slate-500 p-3" (click)="closeMe()">&times;</button>
+        </div>
+        <div [ngSwitch]="variant" class="modal-content p-4">
+            <app-ajoutfiche *ngSwitchCase="'ajout-fiche'"></app-ajoutfiche>
+        </div>
+    </div>
+</div>

@@ -20,8 +20,8 @@
         </div>
 
         <div class="form-group">
-            <label for="duration">Durée</label>
-            <input type="text" class="form-control" id="duration" formControlName="duration">
+            <label for="duration">Durée en minutes</label>
+            <input type="number" class="form-control" id="duration" formControlName="duration">
         </div>
 
         <div class="form-group">
@@ -31,7 +31,10 @@
 
         <div class="form-group">
             <label for="genres">Genres</label>
-            <input type="text" class="form-control" id="genres" formControlName="genres">
+            <select multiple class="form-control" formControlName="genres">
+                <option *ngFor="let content of genresContent" selected="true" [value]="content">{{ content }}
+                </option>
+            </select>
         </div>
 
         <div class="form-group">
