@@ -1,35 +1,33 @@
 <a href="/" class="btn-accueil">Retour à l'accueil</a>
 
 <div *ngIf="fiche" class="fiche-details">
-    <h2>{{ fiche.title }}</h2>
-    <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
-    <p><strong>Catégorie :</strong> {{ fiche.category }}</p>
-    <p><strong>Durée :</strong> {{ fiche.duration }}</p>
-    <p><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
-    <p><strong>Genres :</strong> {{ fiche.genres }}</p>
-    <p><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
+  <h2>{{ fiche.title }}</h2>
+  <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
+  <p><strong>Catégorie :</strong> {{ fiche.category }}</p>
+  <p><strong>Durée :</strong> {{ fiche.duration }}</p>
+  <p><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
+  <p><strong>Genres :</strong> {{ fiche.genres }}</p>
+  <p><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
 </div>
 
 <div *ngIf="notes.length > 0" class="liste-notes">
-    <h3>Notes :</h3>
-    <ul>
-      <li *ngFor="let note of notes">
-        Pseudo : {{ note.pseudo }} - Note : {{ note.note }} - Commentaire : {{ note.commentaire }}
-      </li>
-    </ul>
-  </div>
+  <h3>Notes :</h3>
+  <ul>
+    <li *ngFor="let note of notes">
+      Pseudo : {{ note.pseudo }} - Note : {{ note.note }} - Commentaire : {{ note.commentaire }}
+    </li>
+  </ul>
+</div>
 
-  <form [formGroup]="ficheForm" (ngSubmit)="ajouterAvis()">
-    <div class="notation-fiche">
-      <label for="noteInput">Votre note :</label>
-      <input type="number" id="noteInput" formControlName="note" min="1" max="5" step="1">
-      <label for="commentaireInput">Votre commentaire :</label>
-      <textarea id="commentaireInput" formControlName="commentaire"></textarea>
-      <p *ngIf="ficheForm.invalid && (ficheForm.touched || ficheForm.dirty)" class="message-erreur">
-        {{ getErrorLabel }}
-      </p>
-      <button type="submit">Envoyer</button>
-    </div>
-  </form>
-  
-  
+<form [formGroup]="ficheForm" (ngSubmit)="ajouterAvis()">
+  <div class="notation-fiche">
+    <label for="noteInput">Votre note :</label>
+    <input type="number" id="noteInput" formControlName="note" min="1" max="5" step="1">
+    <label for="commentaireInput">Votre commentaire :</label>
+    <textarea id="commentaireInput" formControlName="commentaire"></textarea>
+    <p *ngIf="ficheForm.invalid && (ficheForm.touched || ficheForm.dirty)" class="message-erreur">
+      {{ getErrorLabel }}
+    </p>
+    <button type="submit">Envoyer</button>
+  </div>
+</form>

@@ -21,6 +21,7 @@
       "genres": "Drame, Aventure, Épouvante-horreur",
       "platforms": "HBO, Prime Video",
       "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg",
+      "userId": 5,
       "notes": [
         {
           "idUtilisateur": 5,
@@ -37,6 +38,7 @@
       "firstAired": "15 Janvier 2021",
       "genres": "Sitcom / Super Héros",
       "platform": "Disney+",
+      "userId": 5,
       "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg"
     },
     {
@@ -46,6 +48,7 @@
       "duration": "47 min",
       "firstAired": "5 mai 2023",
       "genres": "Drame, Science-fiction",
+      "userId": 2,
       "platform": "Apple TV+",
       "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg"
     },
@@ -56,6 +59,7 @@
       "duration": "1h32",
       "firstAired": "2023-04-05",
       "genres": "Animation",
+      "userId": 5,
       "platforms": null,
       "id": 6
     },
@@ -68,6 +72,7 @@
       "genres": "Science-Fiction",
       "platforms": "Disney+",
       "id": 7,
+      "userId": 5,
       "notes": [
         {
           "idUtilisateur": 4,
@@ -76,21 +81,12 @@
       ]
     },
     {
-      "title": "Mon Film",
-      "image": null,
-      "category": null,
-      "duration": null,
-      "firstAired": null,
-      "genres": null,
-      "platforms": null,
-      "id": 8
-    },
-    {
       "title": "Ma nouvelle fiche avec Refecth",
       "image": "https://placehold.co/150x225",
       "category": "Série",
       "duration": 6,
       "firstAired": "2023-12-14",
+      "userId": 2,
       "genres": [
         "Comédie",
         "Drame"
@@ -127,6 +123,17 @@
       "username": "abdoula",
       "password": "azertyuiop",
       "id": 5
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "title": "Ma fiche",
+      "userId": 5,
+      "items": [
+        1,
+        2
+      ]
     }
   ]
 }
