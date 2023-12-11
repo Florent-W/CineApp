@@ -11,10 +11,12 @@ export class UtilisateursService {
 
   constructor(private http: HttpClient) { }
 
-  getUtilisateurs() {
-    this.http.get('http://localhost:3000/users').subscribe((utilisateurs: any) => {
-       this.utilisateursContent = utilisateurs;
-      }
-    );
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3000/users');
+  }
+
+  changeStatutUserById(idUtilisateur: number, nouveauStatut: string): Observable<any> {
+    const statutObjet = { statut: nouveauStatut}
+    return this.http.patch(`http://localhost:3000/users/${idUtilisateur}`, statutObjet);
   }
 }

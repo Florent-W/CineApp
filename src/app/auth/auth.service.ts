@@ -5,11 +5,11 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthService {
-  user: { id: number; username: string; imageUrl: string, email?: string } | undefined;
+  user: { id: number; username: string; imageUrl: string, email?: string, statut: string } | undefined;
 
   constructor(private http: HttpClient) { }
 
-  addUser(user: { username: string; password: string; imageUrl: string, email: string}) {
+  addUser(user: { username: string; password: string; imageUrl: string, email: string, statut: string}) {
     return this.http.post('http://localhost:3000/users', user).subscribe();
   }
 

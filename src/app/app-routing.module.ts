@@ -8,6 +8,7 @@ import { FichesComponent } from './fiches/fiches.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -46,7 +47,10 @@ const routes: Routes = [
     path: 'profil',
     component: ProfilComponent
   },
-
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  }
 ];
 
 @NgModule({
