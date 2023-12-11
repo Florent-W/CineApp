@@ -3,11 +3,15 @@
 <div *ngIf="fiche" class="fiche-details">
     <h2>{{ fiche.title }}</h2>
     <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
-    <p><strong>Catégorie :</strong> {{ fiche.category }}</p>
-    <p><strong>Durée :</strong> {{ fiche.duration }}</p>
-    <p><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
-    <p><strong>Genres :</strong> {{ fiche.genres }}</p>
-    <p><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
+    <p *ngIf="fiche.synopsis"><strong>Synopsis :</strong> {{ fiche.synopsis }}</p>
+    <div *ngIf="fiche.trailerUrl" class="trailer-container">
+      <iframe [src]="fiche.trailerUrl | safeUrl" frameborder="0" width="59%" height="315" allowfullscreen></iframe>
+    </div>
+    <p *ngIf="fiche.category"><strong>Catégorie :</strong> {{ fiche.category }}</p>
+    <p *ngIf="fiche.category"><strong>Durée :</strong> {{ fiche.duration }}</p>
+    <p *ngIf="fiche.firstAired"><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
+    <p *ngIf="fiche.genres"><strong>Genres :</strong> {{ fiche.genres }}</p>
+    <p *ngIf="fiche.platforms"><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
 </div>
 
 <div *ngIf="notes.length > 0" class="liste-notes">

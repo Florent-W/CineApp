@@ -55,7 +55,7 @@ export class FichesService {
      return this.http.get<any[]>('http://localhost:3000/users');
   }
 
-  addFiche(fiche: { title: string; image: string, category: string; duration: string; firstAired: string; genres: string; platforms: string; }) : Observable<any> {
+  addFiche(fiche: { title: string; synopsis: string, trailerUrl: string, image: string, category: string; duration: string; firstAired: string; genres: string; platforms: string; }) : Observable<any> {
     return this.http.post('http://localhost:3000/fiches', fiche);
   }
 
