@@ -33,7 +33,8 @@ export class RegisterComponent implements OnInit {
       username: this.registerForm.value.username,
       password: this.registerForm.value.password,
       imageUrl : this.registerForm.value.imageUrl,
-      email: this.registerForm.value.email
+      email: this.registerForm.value.email,
+      statut: 'utilisateur'
     });
     this.router.navigate(['/login']);
   }

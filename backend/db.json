@@ -26,6 +26,16 @@
           "idUtilisateur": 5,
           "note": 5,
           "commentaire": "Film Genial"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "Bon premier épisode"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 2,
+          "commentaire": "a"
         }
       ]
     },
@@ -37,7 +47,14 @@
       "firstAired": "15 Janvier 2021",
       "genres": "Sitcom / Super Héros",
       "platform": "Disney+",
-      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg"
+      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg",
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "Bonne série"
+        }
+      ]
     },
     {
       "id": 3,
@@ -47,7 +64,34 @@
       "firstAired": "5 mai 2023",
       "genres": "Drame, Science-fiction",
       "platform": "Apple TV+",
-      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg"
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg",
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        }
+      ]
     },
     {
       "title": "Super Mario Bros",
@@ -70,8 +114,39 @@
       "id": 7,
       "notes": [
         {
-          "idUtilisateur": 4,
-          "note": 5
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "c"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "e"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "l"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "b"
         }
       ]
     },
@@ -96,37 +171,61 @@
         "Drame"
       ],
       "platforms": "netflix",
-      "id": 9
+      "id": 9,
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "note": 2,
+          "commentaire": "b"
+        }
+      ]
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "statut": "utilisateur"
     },
     {
       "id": 2,
       "username": "user",
-      "password": "user"
+      "password": "user",
+      "statut": "utilisateur"
     },
     {
       "username": "Florent",
       "password": "test",
       "email": "test@gmail.com",
-      "id": 3
+      "id": 3,
+      "statut": "utilisateur"
     },
     {
       "username": "Test3",
       "password": "test",
       "imageUrl": "https://images.rtl.fr/~c/2000v2000/rtl/www/1219779-obi-wan-kenobi-dans-la-revanche-des-sith.jpg",
       "email": "test@gmail.com",
-      "id": 4
+      "id": 4,
+      "statut": "utilisateur"
     },
     {
       "username": "abdoula",
       "password": "azertyuiop",
-      "id": 5
+      "id": 5,
+      "statut": "utilisateur"
+    },
+    {
+      "username": "test9",
+      "password": "test",
+      "imageUrl": "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/800px-Dracaufeu-RFVF.png",
+      "email": "test@gmail.com",
+      "statut": "administrateur",
+      "id": 6
     }
   ]
 }

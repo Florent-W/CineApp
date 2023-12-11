@@ -11,10 +11,15 @@
 </div>
 
 <div *ngIf="notes.length > 0" class="liste-notes">
-    <h3>Notes :</h3>
+    <h3>Notes (De 0 à 5) :</h3>
     <ul>
       <li *ngFor="let note of notes">
-        Pseudo : {{ note.pseudo }} - Note : {{ note.note }} - Commentaire : {{ note.commentaire }}
+        <img src="{{ note.imageProfil }}" alt="Profil de {{ note.pseudo }}" class="image-profil"> 
+        <div class="informations-note">
+            <span>{{ note.pseudo }}</span>
+            <span>Note : {{ note.note }}</span>
+            <span>{{ note.commentaire }}</span>
+        </div>      
       </li>
     </ul>
   </div>

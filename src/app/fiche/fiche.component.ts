@@ -16,6 +16,7 @@ export class FicheComponent {
     note: ['', [Validators.required, Validators.min(1), Validators.max(5)]],
     commentaire: [''],
   });
+  userId: number | undefined;
 
   notes: any[] = [];
 
@@ -27,6 +28,8 @@ export class FicheComponent {
   ) {}
 
   ngOnInit() {
+    this.userId = this.authService.user?.id!;
+
     this.route.params.subscribe((params) => {
       const idFiche = +params['idFiche'];
       if (idFiche) {
@@ -43,6 +46,9 @@ export class FicheComponent {
         this.fichesService.getNotesFiche(idFiche).subscribe((notes) => {
           this.notes = notes;
           console.log(this.notes);
+          if (notes.some(note => note.idUtilisateur === this.userId)) {
+            this.ficheForm.disable();
+          }
         });
       }
     });
@@ -51,17 +57,21 @@ export class FicheComponent {
   ajouterAvis() {
     if (this.ficheForm.valid && this.authService.isUserConnected()) {
       const note = parseInt(this.ficheForm.value.note!);
-      const idUtilisateur = this.authService.user?.id!;
+      const userId = this.userId!;
       const idFiche = this.fiche.id;
       const commentaire = this.ficheForm.value.commentaire!;
 
       console.log('Note:', note, 'Commentaire:', commentaire);
       this.fichesService
-        .addNote(note, idFiche, idUtilisateur, commentaire)
+        .addNote(note, idFiche, userId, commentaire)
         .subscribe(
           (response) => {
             console.log('Note ajoutée avec succès', response);
-          },
+            this.ficheForm.disable();
+            this.fichesService.getNotesFiche(idFiche).subscribe((notesMisesAJour) => {
+              this.notes = notesMisesAJour;
+        });
+      },
           (error) => {
             console.error("Erreur lors de l'ajout de la note", error);
           }

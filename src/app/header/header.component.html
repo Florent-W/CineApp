@@ -5,6 +5,7 @@
   <div class="header_user">
     <ng-container *ngIf="isUserConnected; else loginTemplate">
       <div class="user-actions">
+        <button *ngIf="isUserAdmin" routerLink="/dashboard"><h2>Dashboard</h2></button>
         <button (click)="toggleDropdown()"><h2>Créer</h2></button>
         <ul class="dropdown-menu" [class.show]="dropdownOpen">
           <li><a routerLink="/ajoutFiche">Créer Fiche</a></li>
