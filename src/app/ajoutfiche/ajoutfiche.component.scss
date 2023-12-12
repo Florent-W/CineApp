@@ -1,49 +1,13 @@
 .fiche-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @apply max-w-[900px];
+  h1 {
+    @apply text-2xl text-center font-bold;
   }
-  
-  .fiche-form-container .form-group {
-    margin-bottom: 15px;
+  @apply max-w-[800x] mx-0 my-auto;
+  .form-group {
+    @apply flex flex-col mb-5 gap-1;
   }
-  
-  .fiche-form-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
+  button {
+    @apply text-right mr-2;
   }
-  
-  .fiche-form-container .form-control {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-
-  .fiche-form-container h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .fiche-form-container .btn {
-    padding: 10px 15px;
-    margin-right: 10px;
-  }
-  
-  .fiche-form-container .btn-primary {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .fiche-form-container .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-  }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FichesService } from '../shared/services/fiches.service';
+import { Fiche, FichesService } from '../shared/services/fiches.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
@@ -50,19 +50,13 @@ export class FichesComponent {
   }
 
   ajouterUneFiche() {
-    this.modaleSarvice
-      .openModal({
-        title: 'Titre',
-        variant: 'ajout-fiche',
-      })
-      .subscribe((action) => {
-        console.log(action);
-
-        console.log('action', action);
-      });
+    this.modaleSarvice.openModal({
+      title: 'Titre',
+      variant: 'ajout-fiche',
+    });
   }
 
-  get fichesContent(): any[] {
+  get fichesContent(): Fiche[] {
     return this.fichesService.fichesContent;
   }
 }
