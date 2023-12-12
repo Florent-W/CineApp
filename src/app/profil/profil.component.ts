@@ -21,8 +21,6 @@ export class ProfilComponent implements OnInit {
 
   get lists(): any {
     const currentUserLists = this.listsService.currentUserLists;
-    console.log(currentUserLists);
-
     return currentUserLists;
   }
 

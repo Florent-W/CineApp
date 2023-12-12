@@ -9,12 +9,12 @@ import { List } from 'src/app/shared/services/lists.service';
 })
 export class ListsComponent implements OnInit {
   @Input() list?: List;
+  @Input() format?: 'small' | 'large' = 'large';
   items: Fiche[] = [];
 
   constructor(private fiches: FichesService) {}
   ngOnInit(): void {
     this.getFicheByListItem();
-    throw new Error('Method not implemented.');
   }
 
   getFicheByListItem = () => {

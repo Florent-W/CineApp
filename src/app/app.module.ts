@@ -19,6 +19,7 @@ import { ModalComponent } from './modal/modal.component';
 import { ListsComponent } from './lists/lists/lists.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SafeUrlPipe } from './pipes/safeurl.pipe';
+import { ListModalComponent } from './list-modal/list-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SafeUrlPipe } from './pipes/safeurl.pipe';
     ModalComponent,
     ListsComponent,
     DashboardComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    ListModalComponent
   ],
   imports: [
     BrowserModule,

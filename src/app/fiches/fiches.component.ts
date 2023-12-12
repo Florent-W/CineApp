@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
 import { ModalService } from '../modal/modal.service';
+import { ListsService } from '../shared/services/lists.service';
 
 @Component({
   selector: 'app-fiches',
@@ -17,7 +18,8 @@ export class FichesComponent {
     private fichesService: FichesService,
     private router: Router,
     private authService: AuthService,
-    private modaleSarvice: ModalService
+    private modaleSarvice: ModalService,
+    private listsService: ListsService
   ) {}
 
   ngOnInit(): void {
@@ -25,10 +27,10 @@ export class FichesComponent {
     this.categorieForm = new FormGroup({
       categorie: new FormControl('tous'),
     });
-
     this.categorieForm.get('categorie')?.valueChanges.subscribe((value) => {
       this.loadFiches(value);
     });
+    this.listsService.getCurrentUserList();
   }
 
   openFiche(fichesId: number): void {
@@ -51,12 +53,23 @@ export class FichesComponent {
 
   ajouterUneFiche() {
     this.modaleSarvice.openModal({
-      title: 'Titre',
+      title: 'Ajouter une nouvelle fiche',
       variant: 'ajout-fiche',
+    });
+  }
+
+  public manageList() {
+    this.modaleSarvice.openModal({
+      title: 'Ajouter à une liste',
+      variant: 'list-modal',
     });
   }
 
   get fichesContent(): Fiche[] {
     return this.fichesService.fichesContent;
+  }
+
+  get allFavoriteId(): number[] {
+    return this.listsService.currentUserLists.map((list) => list.items).flat();
   }
 }

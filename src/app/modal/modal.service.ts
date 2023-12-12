@@ -9,7 +9,7 @@ import {
 import { Subject } from 'rxjs';
 import { ModalComponent } from './modal.component';
 
-export type ModalVariant = 'ajout-fiche';
+export type ModalVariant = 'ajout-fiche' | 'list-modal';
 
 @Injectable({
   providedIn: 'root',

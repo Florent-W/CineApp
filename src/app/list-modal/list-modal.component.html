@@ -1,0 +1,18 @@
+<div class="flex flex-col gap-3 h-full">
+    <input />
+    <button class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded">
+        Ajouter une nouvelle fiche ...
+    </button>
+
+    <div class="flex" *ngFor="let list of lists">
+        <input type="checkbox" />
+        <app-lists class="flex-1" format="large" [list]="list"></app-lists>
+    </div>
+
+    <Button class="btn flex ml-auto gap-3 mt-auto">
+        <span class="material-symbols-outlined">
+            save
+        </span>
+        Enregistrer
+    </Button>
+</div>
