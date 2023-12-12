@@ -22,6 +22,11 @@ export class HeaderComponent {
   get getUsername() {
     return this.authService.user?.username || '';
   }
+
+  get isUserAdmin() {
+    return this.authService.user?.statut === 'administrateur';
+  }
+
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }  

@@ -37,6 +37,14 @@ export class AjoutficheComponent {
       title: new FormControl(null, [
         // Validators.required,
         // lengthValidator(3, 100),
+      ]), 
+      synopsis: new FormControl(null, [
+        // Validators.required,
+        // lengthValidator(1, 1500),
+      ]),
+      trailerUrl: new FormControl(null, [
+        // Validators.required,
+        // lengthValidator(15, 100),
       ]),
       image: new FormControl(null, [
         // Validators.required,

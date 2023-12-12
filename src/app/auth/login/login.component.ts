@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
           id: response[0].id,
           username: response[0].username,
           imageUrl: response[0].imageUrl,
-          email: response[0].email
+          email: response[0].email,
+          statut: response[0].statut
         };
         this.authService.saveUser();
         this.router.navigate(['/']);

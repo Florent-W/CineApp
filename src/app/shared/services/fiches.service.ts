@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { forkJoin } from 'rxjs/internal/observable/forkJoin';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 export type Fiche = {
   id: number;
@@ -57,13 +57,15 @@ export class FichesService {
       utilisateurs: this.getUsers(),
     }).pipe(
       map(({ fiche, utilisateurs }) => {
-        return fiche.notes.map((note: { idUtilisateur: any }) => {
-          const utilisateur = utilisateurs.find(
-            (utilisateur: { id: any }) => utilisateur.id === note.idUtilisateur
-          );
+
+        const notes = fiche.notes || [];
+
+        return notes.map((note: { idUtilisateur: any; }) => {
+          const utilisateur = utilisateurs.find((utilisateur: { id: any; }) => utilisateur.id === note.idUtilisateur);
           return {
             ...note,
             pseudo: utilisateur ? utilisateur.username : 'Inconnu',
+            imageProfil: utilisateur ? utilisateur.imageUrl : ''
           };
         });
       })
@@ -83,21 +85,22 @@ export class FichesService {
     return this.http.get<any[]>('http://localhost:3000/users');
   }
 
-  addFiche(fiche: Fiche): Observable<any> {
-    const ficheData = { ...fiche, userId: +localStorage.getItem('user')! };
-    return this.http.post('http://localhost:3000/fiches', ficheData);
+
+  addFiche(fiche: { title: string; synopsis: string, trailerUrl: string, image: string, category: string; duration: string; firstAired: string; genres: string; platforms: string; }) : Observable<any> {
+    return this.http.post('http://localhost:3000/fiches', fiche);
   }
 
-  addNote(
-    note: Number,
-    idFiche: Number,
-    idUtilisateur: Number,
-    commentaire: String
-  ): Observable<any> {
-    return this.http.patch(`http://localhost:3000/fiches/${idFiche}`, {
-      notes: [
-        { idUtilisateur: idUtilisateur, note: note, commentaire: commentaire },
-      ],
-    });
-  }
+  addNote(note: number, idFiche: number, idUtilisateur: number, commentaire: string) : Observable<any> {
+    return this.getFicheById(idFiche).pipe(
+      switchMap(fiche => {
+        const notes = Array.isArray(fiche.notes) ? fiche.notes : [];
+  
+        const notesMisesAJour = [...notes, { idUtilisateur, note, commentaire }];
+  
+        return this.http.patch(`http://localhost:3000/fiches/${idFiche}`, {
+          notes: notesMisesAJour
+        });
+      })
+    );
+  }  
 }

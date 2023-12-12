@@ -27,6 +27,16 @@
           "idUtilisateur": 5,
           "note": 5,
           "commentaire": "Film Genial"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "Bon premier épisode"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 2,
+          "commentaire": "a"
         }
       ]
     },
@@ -39,7 +49,14 @@
       "genres": "Sitcom / Super Héros",
       "platform": "Disney+",
       "userId": 5,
-      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg"
+      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg",
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "Bonne série"
+        }
+      ]
     },
     {
       "id": 3,
@@ -50,7 +67,34 @@
       "genres": "Drame, Science-fiction",
       "userId": 2,
       "platform": "Apple TV+",
-      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg"
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/04/28/10/15/0697295.jpg",
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        }
+      ]
     },
     {
       "title": "Super Mario Bros",
@@ -75,8 +119,39 @@
       "userId": 5,
       "notes": [
         {
-          "idUtilisateur": 4,
-          "note": 5
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "a"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "b"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "c"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "e"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "l"
+        },
+        {
+          "idUtilisateur": 3,
+          "note": 5,
+          "commentaire": "b"
         }
       ]
     },
@@ -89,37 +164,106 @@
       "userId": 2,
       "genres": ["Comédie", "Drame"],
       "platforms": "netflix",
-      "id": 9
+      "id": 9,
+      "notes": [
+        {
+          "idUtilisateur": 3,
+          "note": 3,
+          "commentaire": "b"
+        },
+        {
+          "note": 2,
+          "commentaire": "b"
+        }
+      ]
+    },
+    {
+      "title": "Man of steel",
+      "synopsis": "Un petit garçon découvre qu'il possède des pouvoirs surnaturels et qu'il n'est pas né sur Terre. Plus tard, il s'engage dans un périple afin de comprendre d'où il vient et pourquoi il a été envoyé sur notre planète. Mais il devra devenir un héros s'il veut sauver le monde de la destruction totale et incarner l'espoir pour toute l'humanité.",
+      "trailerUrl": "https://www.youtube.com/watch?v=wArmHSPIvlQ",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/210/081/21008110_20130524125237634.jpg",
+      "category": "Film",
+      "duration": 143,
+      "firstAired": "2013-06-19",
+      "genres": [
+        "Action",
+        "Drame"
+      ],
+      "platforms": "HBO Max",
+      "id": 10
+    },
+    {
+      "title": "Batman V Superman",
+      "synopsis": "Craignant que Superman n'abuse de sa toute-puissance, le Chevalier noir décide de l'affronter : le monde a-t-il davantage besoin d'un super-héros aux pouvoirs sans limite ou d'un justicier à la force redoutable mais d'origine humaine ? Pendant ce temps-là, une terrible menace se profile à l'horizon…",
+      "trailerUrl": "https://www.youtube.com/watch?v=0WWzgGyAH6Y",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/16/02/03/11/17/130929.jpg",
+      "category": "Film",
+      "duration": 153,
+      "firstAired": "2016-03-23",
+      "genres": [
+        "Action",
+        "Drame"
+      ],
+      "platforms": "HBO Max",
+      "id": 11
+    },
+    {
+      "title": "Zack Snyder's Justice League",
+      "synopsis": "Bruce Wayne est déterminé à faire en sorte que le sacrifice ultime de Superman ne soit pas vain; pour cela, avec l'aide de Diana Prince, il met en place un plan pour recruter une équipe de métahumains afin de protéger le monde d'une menace apocalyptique imminente. La tâche s'avère plus difficile que Bruce ne l'imaginait, car chacune des recrues doit faire face aux démons de son passé et les surpasser pour se rassembler et former une ligue de héros sans précédent. Désormais unis, Batman, Wonder Woman, Aquaman, Cyborg et Flash réussiront-ils à sauver la planète de Steppenwolf, DeSaad, Darkseid et de leurs terribles intentions ?",
+      "trailerUrl": "https://www.youtube.com/watch?v=oTXrl8H6luI",
+      "image": "https://fr.web.img5.acsta.net/c_310_420/pictures/21/04/07/10/59/5550346.jpg",
+      "category": "Film",
+      "duration": 242,
+      "firstAired": "2021-02-27",
+      "genres": [
+        "Action",
+        "Aventure"
+      ],
+      "platforms": "HBO Max",
+      "id": 12
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "statut": "utilisateur"
     },
     {
       "id": 2,
       "username": "user",
-      "password": "user"
+      "password": "user",
+      "statut": "utilisateur"
     },
     {
       "username": "Florent",
       "password": "test",
       "email": "test@gmail.com",
-      "id": 3
+      "id": 3,
+      "statut": "utilisateur"
     },
     {
       "username": "Test3",
       "password": "test",
       "imageUrl": "https://images.rtl.fr/~c/2000v2000/rtl/www/1219779-obi-wan-kenobi-dans-la-revanche-des-sith.jpg",
       "email": "test@gmail.com",
-      "id": 4
+      "id": 4,
+      "statut": "utilisateur"
     },
     {
       "username": "abdoula",
       "password": "azertyuiop",
-      "id": 5
+      "id": 5,
+      "statut": "utilisateur"
+    },
+    {
+      "username": "test9",
+      "password": "test",
+      "imageUrl": "https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/800px-Dracaufeu-RFVF.png",
+      "email": "test@gmail.com",
+      "statut": "administrateur",
+      "id": 6
     }
   ],
   "lists": [

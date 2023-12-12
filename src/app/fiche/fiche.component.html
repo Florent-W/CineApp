@@ -1,23 +1,32 @@
 <a href="/" class="btn-accueil">Retour à l'accueil</a>
 
 <div *ngIf="fiche" class="fiche-details">
-  <h2>{{ fiche.title }}</h2>
-  <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
-  <p><strong>Catégorie :</strong> {{ fiche.category }}</p>
-  <p><strong>Durée :</strong> {{ fiche.duration }}</p>
-  <p><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
-  <p><strong>Genres :</strong> {{ fiche.genres }}</p>
-  <p><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
+    <h2>{{ fiche.title }}</h2>
+    <img [src]="fiche.image" alt="{{fiche.title}}" class="fiche-image">
+    <p *ngIf="fiche.synopsis"><strong>Synopsis :</strong> {{ fiche.synopsis }}</p>
+    <div *ngIf="fiche.trailerUrl" class="trailer-container">
+      <iframe [src]="fiche.trailerUrl | safeUrl" frameborder="0" width="59%" height="315" allowfullscreen></iframe>
+    </div>
+    <p *ngIf="fiche.category"><strong>Catégorie :</strong> {{ fiche.category }}</p>
+    <p *ngIf="fiche.category"><strong>Durée :</strong> {{ fiche.duration }}</p>
+    <p *ngIf="fiche.firstAired"><strong>Première diffusion :</strong> {{ fiche.firstAired }}</p>
+    <p *ngIf="fiche.genres"><strong>Genres :</strong> {{ fiche.genres }}</p>
+    <p *ngIf="fiche.platforms"><strong>Plateformes :</strong> {{ fiche.platforms }}</p>
 </div>
 
 <div *ngIf="notes.length > 0" class="liste-notes">
-  <h3>Notes :</h3>
-  <ul>
-    <li *ngFor="let note of notes">
-      Pseudo : {{ note.pseudo }} - Note : {{ note.note }} - Commentaire : {{ note.commentaire }}
-    </li>
-  </ul>
-</div>
+    <h3>Notes (De 0 à 5) :</h3>
+    <ul>
+      <li *ngFor="let note of notes">
+        <img src="{{ note.imageProfil }}" alt="Profil de {{ note.pseudo }}" class="image-profil"> 
+        <div class="informations-note">
+            <span>{{ note.pseudo }}</span>
+            <span>Note : {{ note.note }}</span>
+            <span>{{ note.commentaire }}</span>
+        </div>      
+      </li>
+    </ul>
+  </div>
 
 <form [formGroup]="ficheForm" (ngSubmit)="ajouterAvis()">
   <div class="notation-fiche">

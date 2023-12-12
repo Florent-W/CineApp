@@ -1,0 +1,25 @@
+<div>
+    <h2>Liste des Utilisateurs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom d'utilisateur</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let utilisateur of utilisateurs">
+          <td>{{ utilisateur.id }}</td>
+          <td>{{ utilisateur.username }}</td>
+          <td>{{ utilisateur.statut }}</td>
+          <td>
+            <button (click)="changeUserStatus(utilisateur.id, 'utilisateur')" class="bouton-utilisateur">Utilisateur</button>
+            <button (click)="changeUserStatus(utilisateur.id, 'administrateur')" class="bouton-administrateur">Administrateur</button>
+            <button (click)="changeUserStatus(utilisateur.id, 'banni')" class="bouton-banni">Bannir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
