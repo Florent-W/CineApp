@@ -10,11 +10,11 @@ export class ListsService {
   constructor(private http: HttpClient, private fichesService: FichesService) {}
 
   getCurrentUserList(): void {
+    console.log(localStorage.getItem('user'));
+
     this.http
       .get<List[]>(
-        `http://localhost:3000/lists?userId=${localStorage.getItem(
-          'user'
-        )}&?_expande=user`
+        `http://localhost:3000/lists?userId=${localStorage.getItem('user')}`
       )
       .subscribe((lists) => {
         this.currentUserLists = lists;
