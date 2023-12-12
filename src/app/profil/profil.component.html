@@ -1,26 +1,33 @@
-<div class="flex flex-col gap-3 max-w-[900px] m-auto">
-    <h1> Profile </h1>
-    <p>Nombre de fiche créer: {{fiches.length}} </p>
-    <div class=" border-slate-300 border p-3 rounded-lg">
-        <h3 class=" font-bold text-lg">Fiches crées</h3>
-        <button class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded">Ajouter une nouvelle fiche ...</button>
-        <div class="">
-            <div class=" flex p-2 rounded mb-1 place-items-center border-b-slate-300 border-b-2 last:border-none"
-                *ngFor="let fiche of fiches">
-                <h3> {{fiche.title}} </h3>
-                <div class="ml-auto flex gap-1"> <button class="btn ml-auto p-1"><span
-                            class="material-symbols-outlined">
-                            edit
-                        </span></button>
-                    <button class="text-white bg-red-600 rounded  p-1 hover:bg-red-800">
-                        <span class="material-symbols-outlined">
-                            delete
-                        </span>
-                    </button>
-                </div>
-            </div>
+<div class="max-w-[900px] m-auto">
+  <div class="flex flex-col gap-3 m-auto">
+    <h1>Profile</h1>
+    <p>Nombre de fiche créer: {{ fiches.length }}</p>
+    <div class="border-slate-300 border p-3 rounded-lg mb-10">
+      <h3 class="font-bold text-lg">Fiches crées</h3>
+      <button class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded">
+        Ajouter une nouvelle fiche ...
+      </button>
+      <div class="">
+        <div
+          class="flex p-2 rounded mb-1 place-items-center border-b-slate-300 border-b-2 last:border-none"
+          *ngFor="let fiche of fiches"
+        >
+          <h3>{{ fiche.title }}</h3>
+          <div class="ml-auto flex gap-1">
+            <button class="btn ml-auto p-1">
+              <span class="material-symbols-outlined"> edit </span>
+            </button>
+            <button class="text-white bg-red-600 rounded p-1 hover:bg-red-800">
+              <span class="material-symbols-outlined"> delete </span>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<app-lists *ngFor="let list of lists" [list]="list"></app-lists>
+  <div class="grid gap-3 m-auto">
+    <h2 class="text-xl font-bold">Liste de collections</h2>
+    <app-lists *ngFor="let list of lists" [list]="list"></app-lists>
+  </div>
+</div>
