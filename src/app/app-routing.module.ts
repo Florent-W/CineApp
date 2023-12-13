@@ -1,60 +1,65 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./auth/login/login.component";
-import { RegisterComponent } from "./auth/register/register.component";
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FichesComponent } from './fiches/fiches.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListModalComponent } from './list-modal/list-modal.component';
 
 const routes: Routes = [
   {
     path: '',
-    component : HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'articles',
-    component: ArticlesComponent
+    component: ArticlesComponent,
   },
   {
     path: 'articles/:idArticle',
-    component: ArticlesComponent
+    component: ArticlesComponent,
   },
   {
     path: 'fiches',
-    component: FichesComponent
+    component: FichesComponent,
   },
   {
     path: 'fiches/:idFiche',
-    component: FicheComponent
+    component: FicheComponent,
   },
   {
     path: 'ajoutFiche',
-    component: AjoutficheComponent
+    component: AjoutficheComponent,
   },
   {
     path: 'profil',
-    component: ProfilComponent
+    component: ProfilComponent,
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
-  }
+    component: DashboardComponent,
+  },
+  {
+    path: 'gerer-liste',
+    component: ListModalComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -4,7 +4,6 @@ import {
   Inject,
   Injectable,
   Injector,
-  TemplateRef,
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { ModalComponent } from './modal.component';
