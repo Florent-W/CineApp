@@ -19,6 +19,7 @@ import { ModalVariant } from './modal.service';
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() public title: string = '';
   @Input() public variant: ModalVariant = 'ajout-fiche';
+  @Input() public context: Record<string, any> = {};
   @Input() public formGroup?: any;
   @Input() public onSubmit?: any;
   @Input() public hasSubmit?: boolean = false;
