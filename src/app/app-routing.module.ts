@@ -9,6 +9,7 @@ import { FicheComponent } from './fiche/fiche.component';
 import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ArticleComponent } from './article/article.component';
 import { ListModalComponent } from './list-modal/list-modal.component';
 
 const routes: Routes = [
@@ -30,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'articles/:idArticle',
-    component: ArticlesComponent,
+    component: ArticleComponent
   },
   {
     path: 'fiches',

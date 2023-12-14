@@ -1,5 +1,10 @@
 <section class="home">
   <h2 class="home_title">Bienvenue sur CinéApp</h2>
 </section>
-<app-fiches></app-fiches>
+<div class="btn-container">
+  <button (click)="showFiches()" class="btn text-right">Fiches</button>
+  <button (click)="showArticles()" class="btn text-right">Articles</button>
+</div>
+<app-fiches *ngIf="!contentSelected || contentSelected === 'fiches'"></app-fiches>
+<app-articles *ngIf="contentSelected === 'articles'"></app-articles>
 
