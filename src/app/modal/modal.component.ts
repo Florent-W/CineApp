@@ -15,7 +15,6 @@ import { ModalVariant } from './modal.service';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  // styleUrls: ["./modal.component.scss"],
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() public title: string = '';
@@ -32,22 +31,17 @@ export class ModalComponent implements OnInit, OnDestroy {
   @ViewChild('modal', { read: ViewContainerRef })
   entry!: ViewContainerRef;
 
-  ngOnInit(): void {
-    console.log('Modal init');
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     console.log('Destroy Modal');
     this.sub.unsubscribe();
   }
 
-  public closeMe(): void {
+  public closeMe(event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
     this.elementRef.nativeElement.remove();
     this.closeEvent.emit();
   }
-
-  // public confirm(): void {
-  //   this.elementRef.nativeElement.remove();
-  //   this.closeEvent.emit();
-  // }
 }

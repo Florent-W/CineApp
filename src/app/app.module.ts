@@ -16,9 +16,11 @@ import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { ModalComponent } from './modal/modal.component';
+import { ListsComponent } from './lists/lists/lists.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SafeUrlPipe } from './pipes/safeurl.pipe';
 import { ArticleComponent } from './article/article.component';
+import { ListModalComponent } from './list-modal/list-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,11 @@ import { ArticleComponent } from './article/article.component';
     ProfilComponent,
     FicheComponent,
     ModalComponent,
+    ListsComponent,
     DashboardComponent,
     SafeUrlPipe,
-    ArticleComponent
+    ArticleComponent,
+    ListModalComponent
   ],
   imports: [
     BrowserModule,

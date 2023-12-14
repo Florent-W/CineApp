@@ -1,25 +1,30 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../../app/auth/auth.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Fiche, FichesService } from '../shared/services/fiches.service';
+import { ListsService } from '../shared/services/lists.service';
 
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
-  styleUrls: ['./profil.component.scss']
+  styleUrls: ['./profil.component.scss'],
 })
-export class ProfilComponent {
-  pseudo: string | undefined;
-  imageUrl: string | undefined;
-  email: string | undefined;
-
-  constructor(private authService: AuthService, private router: Router) { }
+export class ProfilComponent implements OnInit {
+  constructor(
+    private fichesService: FichesService,
+    private listsService: ListsService
+  ) {}
 
   ngOnInit(): void {
-    if (this.authService.isUserConnected()) {
-      this.pseudo = this.authService.user?.username;
-      this.imageUrl = this.authService.user?.imageUrl;
-      this.email = this.authService.user?.email;
-      console.log(this.authService)
-    }
-   };  
+    this.fichesService.getFiches(); // Call getFiches() here
+    this.fichesService.getCurrentUserFiche();
+    this.listsService.getCurrentUserList();
   }
+
+  get lists(): any {
+    const currentUserLists = this.listsService.currentUserLists;
+    return currentUserLists;
+  }
+
+  get fiches(): Fiche[] {
+    return this.fichesService.currentFiche;
+  }
+}

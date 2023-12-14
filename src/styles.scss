@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   @apply h-full w-full m-0 p-0 font-sans bg-white;
+}
+
+html {
+  overflow: hidden;
 }
 
 body {
@@ -40,6 +45,16 @@ body {
   }
 }
 
-.input {
-  @apply border border-violet-500 px-4 py-2 rounded mr-2;
+.input,
+input,
+select {
+  @apply border border-slate-300 px-4 py-2 rounded mr-2;
+}
+
+h1 {
+  @apply text-2xl text-center font-bold;
+}
+
+label {
+  @apply text-slate-800 font-semibold;
 }
