@@ -1,6 +1,10 @@
 <section class="article_container" *ngFor="let content of articleContent; let i = index">
-    <h4 class="article_label" id="article_{{content.id}}">
-        <a (click)="openArticle(content.id)"><b>{{content.titre}}</b></a>
-    </h4>
-    <div (click)="openArticle(content.id)">{{content.contenu}}</div>
+    <div class="article_content" (click)="openArticle(content.id)">
+        <a class="text_content">
+            <h4 class="article_label" id="article_{{content.id}}">
+                <b>{{content.titre}}</b>
+            </h4>
+            <div>{{content.contenu}}</div>
+        </a>
+    </div>
 </section>

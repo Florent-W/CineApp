@@ -1,7 +1,5 @@
 <button *ngIf="isUserConnected()" (click)="ajouterUneFiche()" class="btn text-right">+</button>
-
 <div class="select-categorie-container" [formGroup]="categorieForm">
-
     <label for="categorieSelect">Catégorie :</label>
     <select id="categorieSelect" formControlName="categorie">
         <option value="tous">Tous</option>

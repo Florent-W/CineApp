@@ -18,6 +18,7 @@ import { FicheComponent } from './fiche/fiche.component';
 import { ModalComponent } from './modal/modal.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SafeUrlPipe } from './pipes/safeurl.pipe';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SafeUrlPipe } from './pipes/safeurl.pipe';
     FicheComponent,
     ModalComponent,
     DashboardComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
