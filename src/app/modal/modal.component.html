@@ -1,14 +1,27 @@
-<div [id]="'modal'+'-'+variant"
-    class="modal-overlay absolute overflow-auto top-0 w-full h-full bg-black bg-opacity-40  z-50 flex justify-end">
+<div
+  [id]="'modal' + '-' + variant"
+  class="modal-overlay absolute overflow-auto top-0 w-full h-full bg-black bg-opacity-40 z-50 flex justify-end"
+>
+  <div
+    class="modal-container scroll bg-white w-[700px] max-w-ful overflow-y-auto h-full flex flex-col rounded-md place-self-center"
+  >
     <div
-        class="modal-container scroll bg-white w-[700px] max-w-ful overflow-y-auto h-full flex  flex-col  rounded-md place-self-center ">
-        <div class="modal-header p-4 flex justify-between  border-b-2 justify-items-center">
-            <h4 class="modal-title text-lg font-bold">{{ title }}</h4>
-            <button class="close-button border-slate-500 p-3" (click)="closeMe($event)">&times;</button>
-        </div>
-        <div [ngSwitch]="variant" class="modal-content p-4 flex-1">
-            <app-ajoutfiche *ngSwitchCase="'ajout-fiche'"></app-ajoutfiche>
-            <app-list-modal *ngSwitchCase="'list-modal'"></app-list-modal>
-        </div>
+      class="modal-header p-4 flex justify-between border-b-2 justify-items-center"
+    >
+      <h4 class="modal-title text-lg font-bold">{{ title }}</h4>
+      <button
+        class="close-button border-slate-500 p-3"
+        (click)="closeMe($event)"
+      >
+        &times;
+      </button>
     </div>
+    <div [ngSwitch]="variant" class="modal-content p-4 flex-1">
+      <app-ajoutfiche *ngSwitchCase="'ajout-fiche'"></app-ajoutfiche>
+      <app-list-modal
+        [ficheId]="context['ficheId']"
+        *ngSwitchCase="'list-modal'"
+      ></app-list-modal>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { List, ListsService } from '../shared/services/lists.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { ListsService } from '../shared/services/lists.service';
 
 @Component({
   selector: 'app-list-modal',
@@ -8,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./list-modal.component.scss'],
 })
 export class ListModalComponent implements OnInit {
+  @Input() ficheId?: number;
+
   constructor(
     private listsService: ListsService,
     private cdr: ChangeDetectorRef
@@ -17,6 +19,8 @@ export class ListModalComponent implements OnInit {
   selectedList: number[] = [];
 
   ngOnInit(): void {
+    console.log(this.ficheId);
+    this.updateList();
     this.listsService.getCurrentUserList();
   }
 
@@ -36,12 +40,22 @@ export class ListModalComponent implements OnInit {
       });
   }
 
-  // updateItems(id: number, list: List) {
-  //   if (list.items.includes(id)) {
-  //     const index = list.items.indexOf(5);
+  updateItems(id: number): any {
+    const newList = this.lists.map((list) => {
+      if (list.items.includes(id)) {
+        const index = list.items.indexOf(id);
+        return {
+          ...list,
+          items: list.items.splice(index, 1),
+        };
+      }
+      return { ...list, items: list.items.push(id) };
+    });
 
-  //   }
-  // }
+    console.log(newList);
+
+    return newList;
+  }
 
   updateSelectedList = (id: number) => {
     if (this.selectedList.includes(id)) {
@@ -53,10 +67,15 @@ export class ListModalComponent implements OnInit {
     this.cdr.detectChanges();
   };
 
-  updateList(id: number) {
-    const currentList = this.lists.find((list) => list.id === id);
-    if (currentList) {
-      this.listsService.updateList(currentList);
+  updateList() {
+    console.log(this.ficheId);
+
+    if (this.ficheId) {
+      this.updateItems(this.ficheId);
     }
+    //   const currentList = this.lists.find((list) => list.id === id);
+    //   if (currentList) {
+    //     // this.listsService.updateList(currentList);
+    //   }
   }
 }

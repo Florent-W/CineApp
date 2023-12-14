@@ -58,10 +58,13 @@ export class FichesComponent {
     });
   }
 
-  public manageList() {
+  public manageList(ficheId: number) {
     this.modaleSarvice.openModal({
       title: 'Ajouter à une liste',
       variant: 'list-modal',
+      context: {
+        ficheId,
+      },
     });
   }
 

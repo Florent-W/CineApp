@@ -23,13 +23,18 @@ export class ModalService {
     @Inject(DOCUMENT) private document: Document
   ) {}
 
-  openModal(options: { title: string; variant?: ModalVariant }) {
+  openModal(options: {
+    title: string;
+    variant?: ModalVariant;
+    context?: Record<string, any>;
+  }) {
     const ModalComponentFactory =
       this.resolver.resolveComponentFactory(ModalComponent);
     const modalComponent = ModalComponentFactory.create(this.injector);
 
     modalComponent.instance.title = options?.title;
     modalComponent.instance.variant = options?.variant || 'ajout-fiche';
+    modalComponent.instance.context = options?.context || {};
     modalComponent.instance.closeEvent.subscribe(() => this.closeModal());
     modalComponent.instance.closeEvent.subscribe(() => this.submitModal());
     modalComponent.hostView.detectChanges();
