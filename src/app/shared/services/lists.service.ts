@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Fiche } from './fiches.service';
+import { Observable, forkJoin, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +10,8 @@ export class ListsService {
   public currentUserLists: List[] = [];
   constructor(private http: HttpClient) {}
 
-  public getCurrentUserList(): void {
-    this.http
+  public getCurrentUserList() {
+    return this.http
       .get<List[]>(
         `http://localhost:3000/lists?userId=${localStorage.getItem('user')}`
       )
@@ -29,7 +30,17 @@ export class ListsService {
   }
 
   public updateList(data: List) {
-    return this.http.patch(`http://localhost:3000/lists/${data.id}`, data);
+    return this.http
+      .patch(`http://localhost:3000/lists/${data.id}`, data)
+      .subscribe();
+  }
+
+  public deleteList(id: number) {
+    return this.http.delete(`http://localhost:3000/lists/${id}`).subscribe();
+  }
+
+  bulkUpdateList(listToUpdate: List[]): Observable<any[]> {
+    return forkJoin(listToUpdate.map((list) => this.updateList(list)));
   }
 }
 

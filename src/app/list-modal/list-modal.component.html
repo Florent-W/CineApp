@@ -7,23 +7,27 @@
     Ajouter une nouvelle fiche ...
   </button>
 
-  <div class="flex" *ngFor="let list of lists">
-    <input type="checkbox" [checked]="selectedList.includes(list.id)" />
-    <div
-      (click)="updateSelectedList(list.id)"
-      [class]="
-        selectedList.includes(list.id)
-          ? 'flex-1 p-5 bg-violet-100'
-          : ' flex-1 p-5 shadow'
-      "
+  <select
+    multiple
+    [formControl]="selection"
+    class="border-none overflow-auto flex-1"
+  >
+    <option
+      [class]="' p-5 shadow mb-2 rounded'"
       format="large"
+      class="flex"
+      *ngFor="let list of lists"
+      [value]="list.id"
     >
+      <!-- <input type="checkbox" [checked]="listItemStyle(list)" /> -->
+      <!-- <div (click)="updateSelectedList(list.id)"> -->
       {{ list.title }}
-    </div>
-  </div>
+      <!-- </div> -->
+    </option>
+  </select>
 
-  <Button class="btn flex ml-auto gap-3 mt-auto">
-    <span class="material-symbols-outlined" (click)="updateList()"> save </span>
+  <Button (click)="updateList()" class="btn flex ml-auto gap-3 mt-auto">
+    <span class="material-symbols-outlined"> save </span>
     Enregistrer
   </Button>
 </div>

@@ -1,6 +1,14 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ListsService } from '../shared/services/lists.service';
+import { List, ListsService } from '../shared/services/lists.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-list-modal',
@@ -9,18 +17,16 @@ import { ListsService } from '../shared/services/lists.service';
 })
 export class ListModalComponent implements OnInit {
   @Input() ficheId?: number;
+  title = new FormControl(null, [Validators.required]);
+  selection = new FormControl();
 
   constructor(
     private listsService: ListsService,
-    private cdr: ChangeDetectorRef
+    // private cdr: ChangeDetectorRef,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
-  title = new FormControl(null, [Validators.required]);
-  selectedList: number[] = [];
-
   ngOnInit(): void {
-    console.log(this.ficheId);
-    this.updateList();
     this.listsService.getCurrentUserList();
   }
 
@@ -28,54 +34,60 @@ export class ListModalComponent implements OnInit {
     return this.listsService.currentUserLists;
   }
 
-  createList() {
-    this.cdr.detectChanges();
+  get listsById(): Record<number, List> {
+    const obj = this.lists.reduce((accumulator, list) => {
+      return { ...accumulator, [list.id]: list };
+    }, {});
 
-    this.listsService
-      .addList({ title: this.title.value! })
-      .subscribe((response) => {
-        this.title.setValue(null);
-        this.listsService.getCurrentUserList();
-        this.cdr.detectChanges();
-      });
+    return obj;
   }
 
-  updateItems(id: number): any {
-    const newList = this.lists.map((list) => {
-      if (list.items.includes(id)) {
-        const index = list.items.indexOf(id);
+  createList() {
+    this.listsService.addList({ title: this.title.value! }).subscribe(() => {
+      this.title.setValue(null);
+      this.listsService.getCurrentUserList();
+    });
+  }
+
+  updateItems(): any {
+    if (!this.selection.value) {
+      return [];
+    }
+    const newList = this.selection.value.map((listId: number) => {
+      const currentList = this.listsById[listId];
+      if (currentList.items.includes(this.ficheId as number)) {
         return {
-          ...list,
-          items: list.items.splice(index, 1),
+          ...currentList,
+          items: currentList.items.filter((i) => i != this.ficheId),
         };
       }
-      return { ...list, items: list.items.push(id) };
+      return {
+        ...currentList,
+        items: [...currentList.items, this.ficheId],
+      };
     });
-
-    console.log(newList);
 
     return newList;
   }
 
-  updateSelectedList = (id: number) => {
-    if (this.selectedList.includes(id)) {
-      const index = this.selectedList.indexOf(id);
-      this.selectedList.splice(index, 1);
-    } else {
-      this.selectedList.push(id);
-    }
-    this.cdr.detectChanges();
-  };
+  private removeDomElement() {
+    const appModal = this.document
+      .querySelector('app-modal')
+      ?.remove() as unknown as Element[];
+    appModal?.forEach((appBar) => {
+      const modalChild = appBar.querySelector('#modal-list-modal');
+      if (modalChild) {
+        appBar.remove();
+      }
+    });
+  }
 
-  updateList() {
-    console.log(this.ficheId);
-
+  public updateList() {
+    console.log(this.selection.value);
     if (this.ficheId) {
-      this.updateItems(this.ficheId);
+      this.listsService.bulkUpdateList(this.updateItems());
+      this.listsService.getCurrentUserList();
+      this.removeDomElement();
     }
-    //   const currentList = this.lists.find((list) => list.id === id);
-    //   if (currentList) {
-    //     // this.listsService.updateList(currentList);
-    //   }
   }
 }

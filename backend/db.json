@@ -162,7 +162,10 @@
       "duration": 6,
       "firstAired": "2023-12-14",
       "userId": 2,
-      "genres": ["Comédie", "Drame"],
+      "genres": [
+        "Comédie",
+        "Drame"
+      ],
       "platforms": "netflix",
       "id": 9,
       "notes": [
@@ -266,18 +269,5 @@
       "id": 6
     }
   ],
-  "lists": [
-    {
-      "id": 1,
-      "title": "Mes fiches préférées",
-      "userId": 5,
-      "items": [1, 2]
-    },
-    {
-      "id": 3,
-      "title": "A regarder plus tard",
-      "userId": 5,
-      "items": [4, 3]
-    }
-  ]
+  "lists": []
 }
