@@ -1,0 +1,23 @@
+.list-modal-container {
+  @apply flex flex-col gap-3 h-full;
+}
+
+.list-modal-input {
+  @apply p-2 border rounded;
+}
+
+.list-modal-button {
+  @apply bg-violet-200 disabled:bg-violet-50 text-violet-800;
+}
+
+.list-modal-select {
+  @apply border-none overflow-auto flex-1 mb-auto;
+}
+
+.list-modal-option {
+  @apply p-5 shadow mb-2 rounded;
+}
+
+.list-modal-update-button {
+  @apply flex ml-auto gap-3 mt-auto;
+}

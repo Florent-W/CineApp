@@ -1,25 +1,27 @@
-<div class="p-5 flex flex-col gap-3">
-  <div class="flex justify-between">
-    <h3 class="font-bold">{{ list?.title }}</h3>
+<!-- list-item.component.html -->
+
+<div class="list-item-container">
+  <div class="list-item-header">
+    <h3 class="list-item-title">{{ list?.title }}</h3>
     <span
       (click)="removeList()"
-      class="material-symbols-outlined cursor-pointer"
+      class="material-symbols-outlined list-item-close"
     >
       close
     </span>
   </div>
 
-  <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-2">
-    <div *ngFor="let item of items" class="rounded relative hover:bg-slate-100">
-      <img [src]="item.image" class="h-72 w-full rounded object-cover" />
-      <div class="p-2">
-        <p class="font-bold line-clamp-2">{{ item.title }}</p>
-        <p class="font">{{ item.category }}</p>
+  <div class="list-item-grid">
+    <div
+      *ngFor="let item of items"
+      class="list-item-item rounded relative hover:bg-slate-100"
+    >
+      <img [src]="item.image" class="list-item-image" />
+      <div class="list-item-content p-2">
+        <p class="list-item-content-title">{{ item.title }}</p>
+        <p class="list-item-content-category">{{ item.category }}</p>
       </div>
-      <button
-        (click)="editList(item.id)"
-        class="absolute bg-red-500 shadow-lg p-1 rounded-full flex text-white top-5 right-5"
-      >
+      <button (click)="editList(item.id)" class="list-item-edit-button">
         <span class="material-symbols-outlined"> close </span>
       </button>
     </div>

@@ -6,15 +6,22 @@ import { AuthService } from '../auth/auth.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
   utilisateurs: any[] = [];
 
-  constructor(private utilisateursService: UtilisateursService, private router: Router, private authService: AuthService) {}
+  constructor(
+    private utilisateursService: UtilisateursService,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
-    if (!this.authService.isUserConnected() || this.authService.user?.statut !== 'administrateur') {
+    if (
+      !this.authService.isUserConnected() ||
+      this.authService.user?.statut !== 'administrateur'
+    ) {
       this.router.navigate(['/']);
       return;
     }
@@ -35,14 +42,19 @@ export class DashboardComponent {
   }
 
   changeUserStatus(userId: number, nouveauStatut: string) {
-    this.utilisateursService.changeStatutUserById(userId, nouveauStatut).subscribe(
-      response => {
-        console.log(`Statut de l'utilisateur changé à ${nouveauStatut}:`, response);
-        this.loadUsers();
-      },
-      error => {
-        console.error('Erreur pendant la mise à jour du statut:', error);
-      }
-    );
+    this.utilisateursService
+      .changeStatutUserById(userId, nouveauStatut)
+      .subscribe(
+        (response) => {
+          console.log(
+            `Statut de l'utilisateur changé à ${nouveauStatut}:`,
+            response
+          );
+          this.loadUsers();
+        },
+        (error) => {
+          console.error('Erreur pendant la mise à jour du statut:', error);
+        }
+      );
   }
 }

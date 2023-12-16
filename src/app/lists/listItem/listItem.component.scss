@@ -1,0 +1,39 @@
+.list-item-container {
+  @apply p-5 flex flex-col gap-3;
+}
+
+.list-item-header {
+  @apply flex justify-between;
+}
+
+.list-item-title {
+  @apply font-bold;
+}
+
+.list-item-close {
+  @apply cursor-pointer;
+}
+
+.list-item-grid {
+  @apply grid md:grid-cols-3 lg:grid-cols-5 gap-2;
+}
+
+.list-item-item {
+  @apply rounded relative hover:bg-slate-100;
+}
+
+.list-item-image {
+  @apply h-72 w-full rounded object-cover;
+}
+
+.list-item-content {
+  @apply p-2;
+}
+
+.list-item-content-title {
+  @apply font-bold line-clamp-2;
+}
+
+.list-item-edit-button {
+  @apply absolute bg-red-500 shadow-lg p-1 rounded-full flex text-white top-5 right-5;
+}

@@ -4,11 +4,7 @@
 <div class="border-b-2">
   <button
     *ngFor="let link of navigation"
-    [class]="
-      url == link.path
-        ? 'px-5 py-2 border-b-2 border-purple-500 hover:bg-slate-50'
-        : 'px-5 py-2 hover:bg-slate-50'
-    "
+    [class]="url == link.path ? 'nav-btn-active' : 'nav-btn'"
     [routerLink]="link.path"
   >
     {{ link.label }}

@@ -1,0 +1,6 @@
+.list-container {
+  @apply flex;
+  &-inner {
+    @apply grid gap-3 m-auto;
+  }
+}
