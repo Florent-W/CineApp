@@ -1,8 +1,7 @@
-import { Component, Inject, Input } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Fiche, FichesService } from '../shared/services/fiches.service';
-import { lengthValidator, minNumberValidator } from '../custom-validators';
 import { DOCUMENT } from '@angular/common';
+import { Component, Inject, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Fiche, FichesService } from '../shared/services/fiches.service';
 
 @Component({
   selector: 'app-ajoutfiche',

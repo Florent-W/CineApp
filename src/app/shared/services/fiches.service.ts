@@ -89,7 +89,8 @@ export class FichesService {
   }
 
   addFiche(fiche: Fiche): Observable<any> {
-    return this.http.post('http://localhost:3000/fiches', fiche);
+    const userId = localStorage.getItem('user');
+    return this.http.post('http://localhost:3000/fiches', { ...fiche, userId });
   }
 
   deleteFiche(ficheId: number) {

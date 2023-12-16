@@ -178,6 +178,41 @@
       ],
       "platforms": "HBO Max",
       "id": 12
+    },
+    {
+      "title": "Lorem esse consequa",
+      "synopsis": "Ducimus est digniss",
+      "trailerUrl": "Tempor consequatur ",
+      "image": "Dignissimos voluptat",
+      "category": "Film",
+      "duration": 13,
+      "firstAired": "2008-12-29",
+      "genres": [
+        "Comédie",
+        "Romance",
+        "Aventure",
+        "Animation",
+        "Comédie romantique"
+      ],
+      "platforms": "Minus officia fugit",
+      "id": 13
+    },
+    {
+      "title": "Ullamco repellendus",
+      "synopsis": "Proident deserunt m",
+      "trailerUrl": "Occaecat ut maiores ",
+      "image": "Eveniet ipsum reru",
+      "category": "Série",
+      "duration": 45,
+      "firstAired": "2011-07-31",
+      "genres": [
+        "Comédie",
+        "Romance",
+        "Mystère"
+      ],
+      "platforms": "Necessitatibus aliqu",
+      "userId": "5",
+      "id": 14
     }
   ],
   "users": [
