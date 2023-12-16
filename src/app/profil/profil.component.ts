@@ -14,7 +14,6 @@ export class ProfilComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.fichesService.getFiches(); // Call getFiches() here
     this.fichesService.getCurrentUserFiche();
     this.listsService.getCurrentUserList();
   }
@@ -26,5 +25,10 @@ export class ProfilComponent implements OnInit {
 
   get fiches(): Fiche[] {
     return this.fichesService.currentFiche;
+  }
+
+  public deleteFiche(ficheId: number) {
+    this.fichesService.deleteFiche(ficheId);
+    this.fichesService.getCurrentUserFiche();
   }
 }

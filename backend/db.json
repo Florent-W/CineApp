@@ -108,54 +108,6 @@
       "id": 6
     },
     {
-      "title": "Loki",
-      "image": "https://i.etsystatic.com/18242346/r/il/1c2d51/3186724525/il_570xN.3186724525_ocm2.jpg",
-      "category": "Série",
-      "duration": "2 saisons",
-      "firstAired": "2021-06-09",
-      "genres": "Science-Fiction",
-      "platforms": "Disney+",
-      "id": 7,
-      "userId": 5,
-      "notes": [
-        {
-          "idUtilisateur": 3,
-          "note": 3,
-          "commentaire": "b"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "a"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "b"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "c"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "e"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "l"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 5,
-          "commentaire": "b"
-        }
-      ]
-    },
-    {
       "title": "Ma nouvelle fiche avec Refecth",
       "image": "https://placehold.co/150x225",
       "category": "Série",
