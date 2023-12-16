@@ -1,0 +1,9 @@
+<div class="flex">
+  <div class="grid gap-3 m-auto">
+    <app-lists
+      [id]="list.id"
+      *ngFor="let list of lists"
+      [list]="list"
+    ></app-lists>
+  </div>
+</div>

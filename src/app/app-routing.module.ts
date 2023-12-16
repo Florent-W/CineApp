@@ -10,12 +10,25 @@ import { AjoutficheComponent } from './ajoutfiche/ajoutfiche.component';
 import { ProfilComponent } from './profil/profil.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleComponent } from './article/article.component';
-import { ListModalComponent } from './list-modal/list-modal.component';
+import { ListModalComponent } from './lists/list-modal/list-modal.component';
+import { ListContainerComponent } from './lists/list-container/list-container.component';
+import { UserFicheComponent } from './user-fiche/user-fiche.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    children: [
+      {
+        path: '',
+        component: FichesComponent,
+      },
+      {
+        path: 'fiches',
+        component: FichesComponent,
+      },
+      { path: 'articles', component: ArticlesComponent },
+    ],
   },
   {
     path: 'login',
@@ -26,15 +39,11 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path: 'articles',
-    component: ArticlesComponent,
-  },
-  {
     path: 'articles/:idArticle',
-    component: ArticleComponent
+    component: ArticleComponent,
   },
   {
-    path: 'fiches',
+    path: 'fiche',
     component: FichesComponent,
   },
   {
@@ -48,6 +57,16 @@ const routes: Routes = [
   {
     path: 'profil',
     component: ProfilComponent,
+    children: [
+      {
+        path: '',
+        component: UserFicheComponent,
+      },
+      {
+        path: 'listes',
+        component: ListContainerComponent,
+      },
+    ],
   },
   {
     path: 'dashboard',

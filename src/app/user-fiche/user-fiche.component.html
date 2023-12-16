@@ -1,0 +1,30 @@
+<div class="w-full flex-1">
+  <p>Nombre de fiche créer: {{ fiches.length }}</p>
+  <div class="">
+    <h3 class="font-bold text-lg">Fiches crées</h3>
+    <button
+      class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded active:bg-green-300"
+    >
+      Ajouter une nouvelle fiche ...
+    </button>
+    <div class="">
+      <div
+        class="flex p-2 rounded mb-1 place-items-center border-b-slate-300 border-b-2 last:border-none"
+        *ngFor="let fiche of fiches"
+      >
+        <h3 class="flex-1">{{ fiche.title }}</h3>
+        <div class="ml-auto flex gap-1">
+          <button class="btn ml-auto p-1" (click)="updateFiche(fiche)">
+            <span class="material-symbols-outlined"> edit </span>
+          </button>
+          <button
+            (click)="deleteFiche(fiche.id)"
+            class="text-white bg-red-600 rounded p-1 hover:bg-red-800"
+          >
+            <span class="material-symbols-outlined"> delete </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
