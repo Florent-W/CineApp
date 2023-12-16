@@ -1,6 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FichesService } from '../shared/services/fiches.service';
+import { Fiche, FichesService } from '../shared/services/fiches.service';
 import { lengthValidator, minNumberValidator } from '../custom-validators';
 import { DOCUMENT } from '@angular/common';
 
@@ -26,6 +26,7 @@ export class AjoutficheComponent {
     'Animation',
     'Comédie romantique',
   ];
+  @Input() fiche?: Fiche;
 
   constructor(
     private ficheService: FichesService,
@@ -34,47 +35,54 @@ export class AjoutficheComponent {
 
   ngOnInit(): void {
     this.ficheForm = new FormGroup({
-      title: new FormControl(null, [
+      title: new FormControl(this.fiche?.title, [
         // Validators.required,
         // lengthValidator(3, 100),
-      ]), 
-      synopsis: new FormControl(null, [
+      ]),
+      synopsis: new FormControl(this.fiche?.synopsis, [
         // Validators.required,
         // lengthValidator(1, 1500),
       ]),
-      trailerUrl: new FormControl(null, [
+      trailerUrl: new FormControl(this.fiche?.trailerUrl, [
         // Validators.required,
         // lengthValidator(15, 100),
       ]),
-      image: new FormControl(null, [
+      image: new FormControl(this.fiche?.image, [
         // Validators.required,
         // lengthValidator(5, 1500),
       ]),
-      category: new FormControl(null, [
+      category: new FormControl(this.fiche?.category, [
         // Validators.required,
         // minNumberValidator(4),
       ]),
-      duration: new FormControl(null, [
+      duration: new FormControl(this.fiche?.duration, [
         // Validators.required,
         // minNumberValidator(5),
       ]),
-      firstAired: new FormControl(null),
-      genres: new FormControl(null),
-      platforms: new FormControl(null),
+      firstAired: new FormControl(this.fiche?.firstAired),
+      genres: new FormControl(this.fiche?.genres),
+      platforms: new FormControl(this.fiche?.platforms),
     });
   }
 
   onSubmit(): void {
     if (this.ficheForm.valid) {
-      this.ficheService.addFiche(this.ficheForm.value).subscribe(
-        (response) => {
-          this.resetForm();
-        },
-        (error) => {
-          this.errorMessage = error;
-        }
-      );
-      this.ficheService.getFiches();
+      if (this.fiche) {
+        this.ficheService.updateFiche({
+          ...this.fiche,
+          ...this.ficheForm.value,
+        });
+        this.ficheService.getCurrentUserFiche();
+      } else {
+        this.ficheService.addFiche(this.ficheForm.value).subscribe(
+          (response) => {},
+          (error) => {
+            this.errorMessage = error;
+          }
+        );
+        this.ficheService.getFiches();
+      }
+      this.resetForm();
       this.removeDomElement();
     }
   }

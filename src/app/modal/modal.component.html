@@ -17,7 +17,10 @@
       </button>
     </div>
     <div [ngSwitch]="variant" class="modal-content p-4 flex-1">
-      <app-ajoutfiche *ngSwitchCase="'ajout-fiche'"></app-ajoutfiche>
+      <app-ajoutfiche
+        *ngSwitchCase="'ajout-fiche'"
+        [fiche]="context['fiche']"
+      ></app-ajoutfiche>
       <app-list-modal
         [ficheId]="context['ficheId']"
         *ngSwitchCase="'list-modal'"

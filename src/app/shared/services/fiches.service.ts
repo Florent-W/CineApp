@@ -10,8 +10,10 @@ export type Fiche = {
   category: string;
   duration: number;
   firstAired: string;
+  synopsis: string;
   genres: string[];
   platforms: string;
+  trailerUrl: string[];
   image: string;
   userId: number;
   notes?: {
@@ -93,6 +95,12 @@ export class FichesService {
   deleteFiche(ficheId: number) {
     return this.http
       .delete(`http://localhost:3000/fiches/${ficheId}`)
+      .subscribe();
+  }
+
+  updateFiche(fiche: Fiche) {
+    return this.http
+      .patch(`http://localhost:3000/fiches/${fiche.id}`, fiche)
       .subscribe();
   }
 

@@ -14,12 +14,12 @@
   "fiches": [
     {
       "id": 1,
-      "title": "The Last of Us (2023)",
+      "title": "The last of Us 2023",
       "category": "Série",
       "duration": "59 min",
       "firstAired": "16 janvier 2023",
       "genres": "Drame, Aventure, Épouvante-horreur",
-      "platforms": "HBO, Prime Video",
+      "platforms": "HBO, Prime Video, Netflix",
       "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg",
       "userId": 5,
       "notes": [
@@ -38,7 +38,9 @@
           "note": 2,
           "commentaire": "a"
         }
-      ]
+      ],
+      "synopsis": "Quand le monde tel que vous le connaissiez n'existe plus, quand la ligne entre le bien et le mal devient floue, quand la mort se manifeste au quotidien, jusqu'où iriez-vous pour survivre ? Pour Joel, la survie est une préoccupation quotidienne qu'il gère à sa manière. Mais quand son chemin croise celui d'Ellie, leur voyage à travers ce qui reste des États-Unis va mettre à rude épreuve leur humanité et leur volonté de survivre.\n\nL'adaptation du jeu vidéo The Last Of Us en série.",
+      "trailerUrl": null
     },
     {
       "id": 2,
@@ -233,7 +235,9 @@
     {
       "userId": 5,
       "title": "Autre liste",
-      "items": [],
+      "items": [
+        2
+      ],
       "id": 2
     },
     {
@@ -248,7 +252,9 @@
     {
       "userId": 5,
       "title": "Update",
-      "items": [],
+      "items": [
+        2
+      ],
       "id": 7
     },
     {

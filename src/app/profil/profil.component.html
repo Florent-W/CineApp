@@ -4,7 +4,9 @@
     <p>Nombre de fiche créer: {{ fiches.length }}</p>
     <div class="border-slate-300 border p-3 rounded-lg mb-10">
       <h3 class="font-bold text-lg">Fiches crées</h3>
-      <button class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded">
+      <button
+        class="bg-green-200 font-bold py-1 px-2 text-green-800 rounded active:bg-green-300"
+      >
         Ajouter une nouvelle fiche ...
       </button>
       <div class="">
@@ -14,7 +16,7 @@
         >
           <h3>{{ fiche.title }}</h3>
           <div class="ml-auto flex gap-1">
-            <button class="btn ml-auto p-1">
+            <button class="btn ml-auto p-1" (click)="updateFiche(fiche)">
               <span class="material-symbols-outlined"> edit </span>
             </button>
             <button
