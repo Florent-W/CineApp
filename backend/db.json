@@ -269,5 +269,51 @@
       "id": 6
     }
   ],
-  "lists": []
+  "lists": [
+    {
+      "userId": 5,
+      "title": "Ma nouvelle fiche",
+      "items": [
+        11
+      ],
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "title": "Autre liste",
+      "items": [],
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "title": "Encore une Liste",
+      "items": [
+        10,
+        11
+      ],
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "title": "Update",
+      "items": [],
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "title": "Changement",
+      "items": [
+        10
+      ],
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "title": "Super",
+      "items": [
+        10
+      ],
+      "id": 9
+    }
+  ]
 }

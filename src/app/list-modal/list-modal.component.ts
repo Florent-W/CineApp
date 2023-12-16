@@ -1,14 +1,13 @@
+import { DOCUMENT } from '@angular/common';
 import {
   ChangeDetectorRef,
   Component,
   Inject,
   Input,
-  OnDestroy,
   OnInit,
 } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { List, ListsService } from '../shared/services/lists.service';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-list-modal',
@@ -22,12 +21,21 @@ export class ListModalComponent implements OnInit {
 
   constructor(
     private listsService: ListsService,
-    // private cdr: ChangeDetectorRef,
+    private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.listsService.getCurrentUserList();
+    this.selection.setValue(
+      this.lists.map((l): number | null => {
+        if (l.items.includes(this.ficheId!)) {
+          return l.id;
+        } else {
+          return null;
+        }
+      })
+    );
   }
 
   get lists() {
@@ -45,15 +53,15 @@ export class ListModalComponent implements OnInit {
   createList() {
     this.listsService.addList({ title: this.title.value! }).subscribe(() => {
       this.title.setValue(null);
-      this.listsService.getCurrentUserList();
     });
+    this.listsService.getCurrentUserList();
   }
 
   updateItems(): any {
     if (!this.selection.value) {
       return [];
     }
-    const newList = this.selection.value.map((listId: number) => {
+    const newList = this.selection.value.map((listId: any) => {
       const currentList = this.listsById[listId];
       if (currentList.items.includes(this.ficheId as number)) {
         return {
@@ -83,7 +91,6 @@ export class ListModalComponent implements OnInit {
   }
 
   public updateList() {
-    console.log(this.selection.value);
     if (this.ficheId) {
       this.listsService.bulkUpdateList(this.updateItems());
       this.listsService.getCurrentUserList();
