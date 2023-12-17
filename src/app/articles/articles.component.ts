@@ -19,7 +19,6 @@ export class ArticlesComponent {
 
   openArticle(articleId: number): void {
     this.router.navigate(['/articles', articleId]);
-    console.log('Article ouvert :', articleId);
   }
 
   get articleContent(): any[] {

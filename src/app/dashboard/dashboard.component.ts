@@ -33,7 +33,6 @@ export class DashboardComponent {
     this.utilisateursService.getUsers().subscribe(
       (response) => {
         this.utilisateurs = response;
-        console.log(this.utilisateurs);
       },
       (error) => {
         console.error('Erreur lors du chargement des utilisateurs:', error);
