@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalService } from '../modal/modal.service';
 import { Article, ArticlesService } from '../shared/services/articles.service';
+import { lengthValidator } from '../custom-validators';
 
 @Component({
   selector: 'app-ajoutarticle',
@@ -22,12 +23,12 @@ export class AjoutarticleComponent {
   ngOnInit(): void {
     this.articleForm = new FormGroup({
       title: new FormControl(this.article?.title, [
-        // Validators.required,
-        // lengthValidator(3, 100),
+          Validators.required,
+          lengthValidator(3, 100),
       ]),
       content: new FormControl(this.article?.content, [
-        // Validators.required,
-        // lengthValidator(1, 1500),
+          Validators.required,
+          lengthValidator(1, 1500),
       ]),
     });
   }

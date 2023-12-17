@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { lengthValidator } from '../custom-validators';
+import { lengthValidator, minNumberValidator } from '../custom-validators';
 import { ModalService } from '../modal/modal.service';
 import { Fiche, FichesService } from '../shared/services/fiches.service';
 
@@ -36,28 +36,28 @@ export class AjoutficheComponent {
   ngOnInit(): void {
     this.ficheForm = new FormGroup({
       title: new FormControl(this.fiche?.title, [
-        // Validators.required,
-        // lengthValidator(3, 100),
+          Validators.required,
+          lengthValidator(3, 100),
       ]),
       synopsis: new FormControl(this.fiche?.synopsis, [
-        // Validators.required,
-        // lengthValidator(1, 1500),
+          Validators.required,
+          lengthValidator(1, 1500),
       ]),
       trailerUrl: new FormControl(this.fiche?.trailerUrl, [
-        // Validators.required,
-        // lengthValidator(15, 100),
+          Validators.required,
+          lengthValidator(15, 100),
       ]),
       image: new FormControl(this.fiche?.image, [
-        // Validators.required,
-        // lengthValidator(5, 1500),
+          Validators.required,
+          lengthValidator(5, 1500),
       ]),
       category: new FormControl(this.fiche?.category, [
-        // Validators.required,
-        // minNumberValidator(4),
+          Validators.required,
+          minNumberValidator(4),
       ]),
       duration: new FormControl(this.fiche?.duration, [
-        // Validators.required,
-        // minNumberValidator(5),
+          Validators.required,
+          minNumberValidator(5),
       ]),
       firstAired: new FormControl(this.fiche?.firstAired),
       genres: new FormControl(this.fiche?.genres),
