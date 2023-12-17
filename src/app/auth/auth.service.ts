@@ -5,11 +5,11 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthService {
-  user: { id: number; username: string; imageUrl: string, email?: string, statut: string } | undefined;
+  user: { id: number; username: string; imageUrl: string, email?: string, statut: string, theme: string } | undefined;
 
   constructor(private http: HttpClient) { }
 
-  addUser(user: { username: string; password: string; imageUrl: string, email: string, statut: string}) {
+  addUser(user: { username: string; password: string; imageUrl: string, email: string, statut: string, theme: string}) {
     return this.http.post('http://localhost:3000/users', user).subscribe();
   }
 
@@ -34,17 +34,20 @@ export class AuthService {
     if (this.user) {
       this.saveUser();
       return true;
-    } else if (this.getSavedUser()) {
+    }
+  
+    const userId = this.getSavedUser();
+    if (userId) {
       this.getSavedUserInfo().subscribe((user: any) => {
         this.user = user[0];
         return true;
       });
     }
+
     return false;
   }
 
   private getSavedUserInfo() {
-    console.log(this.getSavedUser())
     return this.http.get('http://localhost:3000/users?id=' + this.getSavedUser());
   }
 }

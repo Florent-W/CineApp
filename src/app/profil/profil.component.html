@@ -1,7 +1,13 @@
 <h1>Espace Utilisateur</h1>
 
-<!-- <app-dashboard></app-dashboard> -->
-
+<label for="selectTheme">Thème :</label>
+<select [(ngModel)]="selectedColor" id="selectTheme" (change)="changeTheme()"> 
+  <option value="#9000ff">Violet</option>
+  <option value="#ff0000">Rouge</option>
+  <option value="#00ff00">Vert</option>
+  <option value="#0000ff">Bleu</option>
+  <option value="#5FBDFF">Bleu clair</option>
+</select>
 <div class="mb-10">
   <div class="border-b-2">
     <button

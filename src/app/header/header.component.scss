@@ -1,4 +1,5 @@
 .header {
+  --primary-background-color: #9000ff;
   @apply bg-violet-500 text-white p-4 flex justify-between items-center;
 
   h1 {
@@ -48,4 +49,6 @@
     align-items: center; 
     gap: 20px; 
   }
+  background-color: var(--primary-background-color)
 }
+

@@ -25,7 +25,8 @@ import { ListContainerComponent } from './lists/list-container/list-container.co
 import { UserFicheComponent } from './user-fiche/user-fiche.component';
 import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 import { TriPipe } from './pipes/tri.pipe';
-import { TooltipDirective } from './directives/tooltip.directive';
+import { TooltipDirective } from './directive/tooltip.directive';
+import { ThemecolorDirective } from './directive/themecolor.directive';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TooltipDirective } from './directives/tooltip.directive';
     UserFicheComponent,
     AjoutarticleComponent,
     TriPipe,
-    TooltipDirective
+    TooltipDirective,
+    ThemecolorDirective
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,9 @@ import { TooltipDirective } from './directives/tooltip.directive';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [  
+    ThemecolorDirective
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
