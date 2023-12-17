@@ -13,6 +13,7 @@ import { ArticleComponent } from './article/article.component';
 import { ListModalComponent } from './lists/list-modal/list-modal.component';
 import { ListContainerComponent } from './lists/list-container/list-container.component';
 import { UserFicheComponent } from './user-fiche/user-fiche.component';
+import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 
 const routes: Routes = [
   {
