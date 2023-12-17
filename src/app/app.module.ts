@@ -25,6 +25,7 @@ import { ListContainerComponent } from './lists/list-container/list-container.co
 import { UserFicheComponent } from './user-fiche/user-fiche.component';
 import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 import { TriPipe } from './pipes/tri.pipe';
+import { TooltipDirective } from './directives/tooltip.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { TriPipe } from './pipes/tri.pipe';
     ListContainerComponent,
     UserFicheComponent,
     AjoutarticleComponent,
-    TriPipe
+    TriPipe,
+    TooltipDirective
   ],
   imports: [
     BrowserModule,
