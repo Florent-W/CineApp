@@ -13,6 +13,18 @@
       @apply text-lg font-bold mr-4;
     }
   }
+
+  .logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+  }  
+
+  .title_container {
+    display: flex;
+    align-items: center; 
+  }
+
   .user-actions {
     position: relative;
   }

@@ -11,7 +11,7 @@ import { tap } from 'rxjs/internal/operators/tap';
 export class UtilisateursService {
 
   utilisateursContent: any[] = [];
-  private themeSubject = new BehaviorSubject<string>('#0000ff');
+  private themeSubject = new BehaviorSubject<string>('#9000ff');
   theme$ = this.themeSubject.asObservable();
 
   constructor(private http: HttpClient) { }

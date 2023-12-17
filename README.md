@@ -1,5 +1,14 @@
 # CinéApp
-Ce projet a été réalisé par Florent Weltmann, Abdoula Jaiteh et William Girard-Reydet. 
+Ce projet a été réalisé par Florent Weltmann, Abdoula Jaiteh et William Girard-Reydet.
+
+Le site permet de recenser les films, les séries et d'ajouter / modifier des articles sur l'actualité.
+Les utilisateurs peuvent également noter des films et des séries, créer des listes, changer la couleur des thèmes.
+
+Les administrateurs peuvent changer le statut des utilisateurs.
+
+En appuyant sur une fiche ou un article, des détails supplémentaires s'affichent et en mettant le curseur sur une fiche, une tooltip se déclenche.
+
+Il y a un filtre pour sélectionner quelle catégorie nous souhaitons voir et un tri.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 

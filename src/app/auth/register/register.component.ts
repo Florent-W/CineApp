@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
       imageUrl : this.registerForm.value.imageUrl,
       email: this.registerForm.value.email,
       statut: 'utilisateur',
-      theme: '#0000ff'
+      theme: '#9000ff'
     });
     this.router.navigate(['/login']);
   }
