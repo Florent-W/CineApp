@@ -25,7 +25,7 @@
       "firstAired": "16 janvier 2023",
       "genres": "Drame, Aventure, Épouvante-horreur",
       "platforms": "HBO, Prime Video, Netflix",
-      "image": "https://fr.web.img2.acsta.net/pictures/23/01/12/12/36/0727474.jpg",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/01/12/12/36/0727474.jpg",
       "userId": 5,
       "notes": [
         {
@@ -40,7 +40,7 @@
         }
       ],
       "synopsis": "Quand le monde tel que vous le connaissiez n'existe plus, quand la ligne entre le bien et le mal devient floue, quand la mort se manifeste au quotidien, jusqu'où iriez-vous pour survivre ? Pour Joel, la survie est une préoccupation quotidienne qu'il gère à sa manière. Mais quand son chemin croise celui d'Ellie, leur voyage à travers ce qui reste des États-Unis va mettre à rude épreuve leur humanité et leur volonté de survivre.\n\nL'adaptation du jeu vidéo The Last Of Us en série.",
-      "trailerUrl": null
+      "trailerUrl": "https://www.youtube.com/watch?v=uLtkt8BonwM"
     },
     {
       "id": 2,
@@ -51,14 +51,16 @@
       "genres": "Sitcom / Super Héros",
       "platform": "Disney+",
       "userId": 5,
-      "image": "https://www.lescomics.fr/wp-content/uploads/2021/01/wandavision-poster-1600668936.jpg",
+      "image": "https://fr.web.img2.acsta.net/c_310_420/pictures/21/02/01/16/54/3730739.jpg",
       "notes": [
         {
           "idUtilisateur": 3,
           "note": 5,
           "commentaire": "Bonne série"
         }
-      ]
+      ],
+      "synopsis": "Wanda Maximoff alias Scarlet Witch et Vision sont des super-héros, vivant dans une banlieue idéalisée mais commençant à soupçonner que tout n’est peut-être pas ce qu'il paraît être...",
+      "trailerUrl": "https://www.youtube.com/watch?v=UBhlqe2OTt4"
     },
     {
       "id": 3,

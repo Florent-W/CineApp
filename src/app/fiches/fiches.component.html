@@ -1,10 +1,4 @@
-<button
-  *ngIf="isUserConnected()"
-  (click)="ajouterUneFiche()"
-  class="btn text-right"
->
-  +
-</button>
+
 <div class="select-categorie-container" [formGroup]="categorieForm">
   <label for="categorieSelect">Catégorie :</label>
   <select id="categorieSelect" formControlName="categorie">
@@ -12,12 +6,20 @@
     <option value="Film">Films</option>
     <option value="Série">Séries</option>
   </select>
+
+  <label for="triSelect">Tri :</label>
+  <select id="triSelect" formControlName="tri">
+    <option value="title-asc">Nom (A-Z)</option>
+    <option value="title-desc">Nom (Z-A)</option>
+    <option value="firstAired-asc">Date de sortie la plus vielle à la plus récente</option>
+    <option value="firstAired-desc">Date de sortie la plus récente à la plus vielle</option>
+  </select>
 </div>
 
 <div class="fiche_container grid md:grid-cols-3 lg:grid-cols-5 gap-2">
   <div
     class="fiche w-50 relative"
-    *ngFor="let content of fichesContent; let i = index"
+    *ngFor="let content of fichesContent | tri:sortField:sortOrder; let i = index"
   >
     <div class="fiche_content" (click)="openFiche(content.id)">
       <img
@@ -51,3 +53,10 @@
     </span>
   </div>
 </div>
+<button
+  *ngIf="isUserConnected()"
+  (click)="ajouterUneFiche()"
+  class="btn text-right"
+>
+  +
+</button>

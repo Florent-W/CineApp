@@ -22,6 +22,7 @@ import { SafeUrlPipe } from './pipes/safeurl.pipe';
 import { ArticleComponent } from './article/article.component';
 import { ListModalComponent } from './list-modal/list-modal.component';
 import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
+import { TriPipe } from './pipes/tri.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
     SafeUrlPipe,
     ArticleComponent,
     ListModalComponent,
-    AjoutarticleComponent
+    AjoutarticleComponent,
+    TriPipe
   ],
   imports: [
     BrowserModule,
