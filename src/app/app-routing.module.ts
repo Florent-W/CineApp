@@ -55,6 +55,10 @@ const routes: Routes = [
     component: AjoutficheComponent,
   },
   {
+    path: 'ajoutArticle',
+    component: AjoutarticleComponent
+  },
+  {
     path: 'profil',
     component: ProfilComponent,
     children: [

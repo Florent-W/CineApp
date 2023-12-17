@@ -1,0 +1,14 @@
+.article-form-container {
+    @apply max-w-[900px];
+    h1 {
+      @apply text-2xl text-center font-bold;
+    }
+    @apply max-w-[800x] mx-0 my-auto;
+    .form-group {
+      @apply flex flex-col mb-5 gap-1;
+    }
+    button {
+      @apply text-right mr-2;
+    }
+  }
+  

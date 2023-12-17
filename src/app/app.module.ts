@@ -23,6 +23,8 @@ import { ListModalComponent } from './lists/list-modal/list-modal.component';
 import { ListItemComponent } from './lists/listItem/listItem.component';
 import { ListContainerComponent } from './lists/list-container/list-container.component';
 import { UserFicheComponent } from './user-fiche/user-fiche.component';
+import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
+import { TriPipe } from './pipes/tri.pipe';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { UserFicheComponent } from './user-fiche/user-fiche.component';
     ListModalComponent,
     ListContainerComponent,
     UserFicheComponent,
+    AjoutarticleComponent,
+    TriPipe
   ],
   imports: [
     BrowserModule,

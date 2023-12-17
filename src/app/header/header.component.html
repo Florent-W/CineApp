@@ -9,6 +9,7 @@
         <button (click)="toggleDropdown()"><h2>Créer</h2></button>
         <ul class="dropdown-menu" [class.show]="dropdownOpen">
           <li><a routerLink="/ajoutFiche">Créer Fiche</a></li>
+          <li><a routerLink="/ajoutArticle">Créer Article</a></li>
         </ul>
       </div>
       <h2 routerLink="/profil">{{ getUsername }}</h2>

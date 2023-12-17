@@ -1,0 +1,16 @@
+<section class="article-form-container">
+    <h1>Ajout d'un article</h1>
+    <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input type="text" class="form-control" id="title" formControlName="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Contenu</label>
+            <textarea class="form-control" id="content" formControlName="content" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Soumettre</button>
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Réinitialiser</button>
+    </form>
+</section>

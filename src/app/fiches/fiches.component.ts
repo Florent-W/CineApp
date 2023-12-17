@@ -13,6 +13,9 @@ import { ListsService } from '../shared/services/lists.service';
 })
 export class FichesComponent {
   categorieForm!: FormGroup;
+  selectedSort = 'title-asc';
+  sortField = 'title';
+  sortOrder = 'asc';
 
   constructor(
     private fichesService: FichesService,
@@ -26,13 +29,17 @@ export class FichesComponent {
     this.fichesService.getFiches();
     this.categorieForm = new FormGroup({
       categorie: new FormControl('tous'),
+      tri: new FormControl('title-asc')
     });
     this.categorieForm.get('categorie')?.valueChanges.subscribe((value) => {
       this.loadFiches(value);
     });
+    this.categorieForm.get('tri')?.valueChanges.subscribe(selectedSort => {
+      [this.sortField, this.sortOrder] = selectedSort.split('-');
+    });
     this.listsService.getCurrentUserList();
   }
-
+  
   openFiche(fichesId: number): void {
     this.router.navigate(['/fiches', fichesId]);
     console.log('Fiche ouverte :', fichesId);
