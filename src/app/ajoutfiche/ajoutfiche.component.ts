@@ -82,6 +82,22 @@ export class AjoutficheComponent {
     }
   }
 
+  get getErrorLabel() {
+    console.log('test')
+    console.log(this.ficheForm);
+    if (this.ficheForm.get('title')?.errors?.["required"]) {
+      return 'Le titre est obligatoire';
+    }
+    if (this.ficheForm.get('synopsis')?.errors?.["required"]) {
+      return 'Le mot de passe est obligatoire';
+    }
+    if (this.ficheForm.get('trailerUrl')?.errors?.["required"]) {
+      return 'Le trailer est obligatoire';
+    }
+  
+    return 'Un problème est survenu';
+  }
+
   resetForm(): void {
     this.ficheForm.reset();
   }

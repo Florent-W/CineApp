@@ -92,7 +92,9 @@
         formControlName="platforms"
       />
     </div>
-
+    <p *ngIf="ficheForm.invalid && (ficheForm.touched || ficheForm.dirty)" class="fiche_error">
+        {{ getErrorLabel }}
+    </p>
     <button type="submit" class="btn btn-primary" [disabled]="ficheForm.errors">
       Soumettre
     </button>
