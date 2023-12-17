@@ -5,15 +5,19 @@
   <div class="header_user">
     <ng-container *ngIf="isUserConnected; else loginTemplate">
       <div class="user-actions">
-        <button *ngIf="isUserAdmin" routerLink="/dashboard"><h2>Dashboard</h2></button>
+        <button *ngIf="isUserAdmin" routerLink="/dashboard">
+          <h2>Dashboard</h2>
+        </button>
         <button (click)="toggleDropdown()"><h2>Créer</h2></button>
         <ul class="dropdown-menu" [class.show]="dropdownOpen">
-          <li><a routerLink="/ajoutFiche">Créer Fiche</a></li>
-          <li><a routerLink="/ajoutArticle">Créer Article</a></li>
+          <li (click)="ajouterUneFiche()"><a>Créer Fiche</a></li>
+          <li (click)="ajouterUnArticle()"><a>Créer Article</a></li>
         </ul>
       </div>
       <h2 routerLink="/profil">{{ getUsername }}</h2>
-      <button class="btn-secondary" (click)="logout()" routerLink="/login">Se déconnecter</button>
+      <button class="btn-secondary" (click)="logout()" routerLink="/login">
+        Se déconnecter
+      </button>
     </ng-container>
     <ng-template #loginTemplate>
       <button class="btn-secondary" routerLink="/login">Se connecter</button>

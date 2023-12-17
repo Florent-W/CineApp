@@ -1,12 +1,12 @@
-import { Component, Inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ModalService } from '../modal/modal.service';
 import { Article, ArticlesService } from '../shared/services/articles.service';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-ajoutarticle',
   templateUrl: './ajoutarticle.component.html',
-  styleUrls: ['./ajoutarticle.component.scss']
+  styleUrls: ['./ajoutarticle.component.scss'],
 })
 export class AjoutarticleComponent {
   articleForm!: FormGroup;
@@ -16,7 +16,7 @@ export class AjoutarticleComponent {
 
   constructor(
     private articleService: ArticlesService,
-    @Inject(DOCUMENT) private document: Document
+    private modalService: ModalService
   ) {}
 
   ngOnInit(): void {
@@ -40,29 +40,13 @@ export class AjoutarticleComponent {
           ...this.articleForm.value,
         });
       } else {
-        this.articleService.addArticle(this.articleForm.value).subscribe(
-          (response) => {},
-          (error) => {
-            this.errorMessage = error;
-          }
-        );
-        this.articleService.getArticles();
+        this.articleService.addArticle(this.articleForm.value).subscribe();
       }
       this.resetForm();
-      this.removeDomElement();
+      this.articleService.getCurrentUserarticle();
+      this.articleService.getArticles();
+      this.modalService.closeModal('modal-ajout-article');
     }
-  }
-
-  private removeDomElement() {
-    const appModal = this.document
-      .querySelector('app-modal')
-      ?.remove() as unknown as Element[];
-    appModal?.forEach((appBar) => {
-      const modalChild = appBar.querySelector('#modal-ajout-article');
-      if (modalChild) {
-        appBar.remove();
-      }
-    });
   }
 
   resetForm(): void {

@@ -29,17 +29,17 @@ export class FichesComponent {
     this.fichesService.getFiches();
     this.categorieForm = new FormGroup({
       categorie: new FormControl('tous'),
-      tri: new FormControl('title-asc')
+      tri: new FormControl('title-asc'),
     });
     this.categorieForm.get('categorie')?.valueChanges.subscribe((value) => {
       this.loadFiches(value);
     });
-    this.categorieForm.get('tri')?.valueChanges.subscribe(selectedSort => {
+    this.categorieForm.get('tri')?.valueChanges.subscribe((selectedSort) => {
       [this.sortField, this.sortOrder] = selectedSort.split('-');
     });
     this.listsService.getCurrentUserList();
   }
-  
+
   openFiche(fichesId: number): void {
     this.router.navigate(['/fiches', fichesId]);
     console.log('Fiche ouverte :', fichesId);
@@ -56,13 +56,6 @@ export class FichesComponent {
 
   isUserConnected() {
     return this.authService.isUserConnected();
-  }
-
-  ajouterUneFiche() {
-    this.modaleSarvice.openModal({
-      title: 'Ajouter une nouvelle fiche',
-      variant: 'ajout-fiche',
-    });
   }
 
   public manageList(ficheId: number) {

@@ -26,6 +26,7 @@ import { UserFicheComponent } from './user-fiche/user-fiche.component';
 import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 import { TriPipe } from './pipes/tri.pipe';
 import { TooltipDirective } from './directives/tooltip.directive';
+import { UserArticlesComponent } from './user-articles/user-articles.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TooltipDirective } from './directives/tooltip.directive';
     UserFicheComponent,
     AjoutarticleComponent,
     TriPipe,
-    TooltipDirective
+    TooltipDirective,
+    UserArticlesComponent,
   ],
   imports: [
     BrowserModule,

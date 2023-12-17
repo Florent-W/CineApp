@@ -1,0 +1,25 @@
+<div class="w-full flex-1">
+  <p>Nombre de fiche créer: {{ articles.length }}</p>
+  <div class="">
+    <h3 class="font-bold text-lg">Fiches crées</h3>
+    <div class="">
+      <div
+        class="flex p-2 rounded mb-1 place-items-center border-b-slate-300 border-b-2 last:border-none"
+        *ngFor="let Article of articles"
+      >
+        <h3 class="flex-1">{{ Article.title }}</h3>
+        <div class="ml-auto flex gap-1">
+          <button class="btn ml-auto p-1" (click)="updateFiche(Article)">
+            <span class="material-symbols-outlined"> edit </span>
+          </button>
+          <button
+            (click)="deleteArticle(Article.id)"
+            class="text-white bg-red-600 rounded p-1 hover:bg-red-800"
+          >
+            <span class="material-symbols-outlined"> delete </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

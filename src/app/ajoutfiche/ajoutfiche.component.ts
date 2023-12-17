@@ -1,6 +1,7 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, Input } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { lengthValidator } from '../custom-validators';
+import { ModalService } from '../modal/modal.service';
 import { Fiche, FichesService } from '../shared/services/fiches.service';
 
 @Component({
@@ -29,7 +30,7 @@ export class AjoutficheComponent {
 
   constructor(
     private ficheService: FichesService,
-    @Inject(DOCUMENT) private document: Document
+    private modalService: ModalService
   ) {}
 
   ngOnInit(): void {
@@ -73,29 +74,12 @@ export class AjoutficheComponent {
         });
         this.ficheService.getCurrentUserFiche();
       } else {
-        this.ficheService.addFiche(this.ficheForm.value).subscribe(
-          (response) => {},
-          (error) => {
-            this.errorMessage = error;
-          }
-        );
+        this.ficheService.addFiche(this.ficheForm.value).subscribe();
         this.ficheService.getFiches();
       }
       this.resetForm();
-      this.removeDomElement();
+      this.modalService.closeModal('modal-ajout-fiche');
     }
-  }
-
-  private removeDomElement() {
-    const appModal = this.document
-      .querySelector('app-modal')
-      ?.remove() as unknown as Element[];
-    appModal?.forEach((appBar) => {
-      const modalChild = appBar.querySelector('#modal-ajout-fiche');
-      if (modalChild) {
-        appBar.remove();
-      }
-    });
   }
 
   resetForm(): void {

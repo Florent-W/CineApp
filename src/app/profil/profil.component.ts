@@ -10,6 +10,7 @@ export class ProfilComponent {
   navigation = [
     { path: '/profil', label: 'Mes Fiches' },
     { path: '/profil/listes', label: 'Mes Listes' },
+    { path: '/profil/articles', label: 'Mes Articles' },
   ];
   constructor(private router: Router) {}
 

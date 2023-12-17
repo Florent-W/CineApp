@@ -11,8 +11,7 @@ export class HomeComponent implements OnInit {
   playerName = '';
   contentSelected = '';
   navigation = [
-    { path: '/', label: 'Tout' },
-    { path: '/fiches', label: 'Fiches' },
+    { path: '/', label: 'Fiches' },
     { path: '/articles', label: 'Articles' },
   ];
 

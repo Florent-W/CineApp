@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { AuthService } from "../auth/auth.service";
+import { AuthService } from '../auth/auth.service';
+import { ModalService } from '../modal/modal.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  dropdownOpen = false;  
+  dropdownOpen = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private modalService: ModalService
+  ) {}
 
   logout() {
     this.authService.logout();
@@ -29,5 +33,18 @@ export class HeaderComponent {
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
-  }  
+  }
+
+  ajouterUneFiche() {
+    this.modalService.openModal({
+      title: 'Ajouter une nouvelle fiche',
+      variant: 'ajout-fiche',
+    });
+  }
+  ajouterUnArticle() {
+    this.modalService.openModal({
+      title: 'Ajouter un article',
+      variant: 'ajout-article',
+    });
+  }
 }
