@@ -1,5 +1,5 @@
 # CinéApp
-Ce projet a été réalisé par Florent Weltmann, Abdoula Jaiteh et William Girard-Reydet.
+Ce projet a été réalisé par Florent Weltmann, Abdoula Jaiteh et William Girard-Reydet. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
