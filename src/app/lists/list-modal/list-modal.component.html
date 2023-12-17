@@ -1,0 +1,28 @@
+<div class="list-modal-container">
+  <input [formControl]="title" class="list-modal-input" />
+
+  <button (click)="createList()" class="btn list-modal-button">
+    Ajouter une nouvelle fiche ...
+  </button>
+
+  <select
+    multiple
+    [formControl]="selection"
+    class="list-modal-select"
+    *ngIf="lists"
+    autofocus
+  >
+    <option
+      [class]="'list-modal-option'"
+      *ngFor="let list of lists"
+      [value]="list.id"
+    >
+      {{ list.title }}
+    </option>
+  </select>
+
+  <Button (click)="updateList()" class="btn list-modal-update-button">
+    <span class="material-symbols-outlined"> save </span>
+    Enregistrer
+  </Button>
+</div>

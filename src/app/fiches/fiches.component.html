@@ -19,19 +19,15 @@
 <div class="fiche_container grid md:grid-cols-3 lg:grid-cols-5 gap-2">
   <div
     class="fiche w-50 relative"
-    *ngFor="let content of fichesContent | tri:sortField:sortOrder; let i = index"
-  >
+    *ngFor="let content of fichesContent | tri:sortField:sortOrder; let i = index">
     <div class="fiche_content" (click)="openFiche(content.id)">
       <img
         [src]="content.image"
         alt="{{ content.title }}"
-        class="fiche-image rounded object-fill"
+        class="fiche-image"
       />
-      <a class="text_content text-center p-3">
-        <h4
-          class="fiche_label font-bold line-clamp-2"
-          id="fiche_{{ content.id }}"
-        >
+      <a class="text_content">
+        <h4 class="fiche_label" id="fiche_{{ content.id }}">
           {{ content.title }}
         </h4>
         <div>{{ content.category }}</div>

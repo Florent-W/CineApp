@@ -5,12 +5,11 @@ import { List, ListsService } from 'src/app/shared/services/lists.service';
 
 @Component({
   selector: 'app-lists',
-  templateUrl: './lists.component.html',
-  styleUrls: ['./lists.component.scss'],
+  templateUrl: './listItem.component.html',
+  styleUrls: ['./listItem.component.scss'],
 })
-export class ListsComponent implements OnInit, OnDestroy {
+export class ListItemComponent implements OnInit, OnDestroy {
   @Input() list?: List;
-  @Input() format?: 'small' | 'large' = 'large';
   items: Fiche[] = [];
 
   constructor(
@@ -22,7 +21,6 @@ export class ListsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.listsService.getCurrentUserList().unsubscribe();
     this.getFicheByListItem().unsubscribe();
   }
 

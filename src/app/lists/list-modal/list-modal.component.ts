@@ -7,7 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { List, ListsService } from '../shared/services/lists.service';
+import { List, ListsService } from '../../shared/services/lists.service';
 
 @Component({
   selector: 'app-list-modal',

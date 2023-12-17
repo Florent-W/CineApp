@@ -1,3 +1,23 @@
-.select-categorie-container {
+.fiche_container {
+  @apply grid md:grid-cols-3 lg:grid-cols-5 gap-2;
+
+  .fiche {
+    @apply relative;
+  }
+
+  .fiche_image {
+    @apply relative w-full;
+  }
+
+  .fiche_label {
+    @apply font-bold line-clamp-2;
+  }
+
+  .text_content {
+    @apply text-center p-3;
+  }
+  
+  .select-categorie-container {
     margin-bottom: 12px;
+  }
 }
