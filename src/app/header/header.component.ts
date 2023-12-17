@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../auth/auth.service";
 import { UtilisateursService } from '../shared/services/utilisateurs.service';
+import { ModalService } from '../modal/modal.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
+
 export class HeaderComponent implements OnInit {
   dropdownOpen = false;
   theme: string = '';
 
-  constructor(private authService: AuthService, private utilisateursService: UtilisateursService) {}
+  constructor(private authService: AuthService, private utilisateursService: UtilisateursService, private modalService: ModalService) {}
 
   ngOnInit(): void {
     this.fetchTheme();
@@ -61,5 +63,16 @@ export class HeaderComponent implements OnInit {
         console.error('Erreur lors de la mise à jour du thème :', error);
       }
     );
+  ajouterUneFiche() {
+    this.modalService.openModal({
+      title: 'Ajouter une nouvelle fiche',
+      variant: 'ajout-fiche',
+    });
+  }
+  ajouterUnArticle() {
+    this.modalService.openModal({
+      title: 'Ajouter un article',
+      variant: 'ajout-article',
+    });
   }
 }

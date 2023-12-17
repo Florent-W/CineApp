@@ -27,6 +27,7 @@ import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 import { TriPipe } from './pipes/tri.pipe';
 import { TooltipDirective } from './directive/tooltip.directive';
 import { ThemecolorDirective } from './directive/themecolor.directive';
+import { UserArticlesComponent } from './user-articles/user-articles.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ThemecolorDirective } from './directive/themecolor.directive';
     TriPipe,
     TooltipDirective,
     ThemecolorDirective
+    UserArticlesComponent,
   ],
   imports: [
     BrowserModule,

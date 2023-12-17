@@ -13,6 +13,10 @@
         [ficheId]="context['ficheId']"
         *ngSwitchCase="'list-modal'"
       ></app-list-modal>
+      <app-ajoutarticle
+        *ngSwitchCase="'ajout-article'"
+        [article]="context['article']"
+      ></app-ajoutarticle>
     </div>
   </div>
 </div>

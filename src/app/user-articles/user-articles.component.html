@@ -1,14 +1,14 @@
 <div
   class="flex p-2 rounded mb-1 place-items-center border-b-slate-300 border-b-2 last:border-none"
-  *ngFor="let fiche of fiches"
+  *ngFor="let Article of articles"
 >
-  <h3 class="flex-1">{{ fiche.title }}</h3>
+  <h3 class="flex-1">{{ Article.title }}</h3>
   <div class="ml-auto flex gap-1">
-    <button class="btn ml-auto p-1" (click)="updateFiche(fiche)">
+    <button class="btn ml-auto p-1" (click)="updateFiche(Article)">
       <span class="material-symbols-outlined"> edit </span>
     </button>
     <button
-      (click)="deleteFiche(fiche.id)"
+      (click)="deleteArticle(Article.id)"
       class="text-white bg-red-600 rounded p-1 hover:bg-red-800"
     >
       <span class="material-symbols-outlined"> delete </span>

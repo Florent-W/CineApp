@@ -2,18 +2,33 @@
   "articles": [
     {
       "id": 1,
-      "title": "Test",
+      "title": "Test 1",
+      "userId": 5,
       "content": "bbbbbbbbbbbbbbbbb"
     },
     {
       "id": 2,
-      "title": "Test2",
+      "title": "Test 2.0",
+      "userId": 5,
       "content": "ccccccccccc"
     },
     {
-      "title": "Test",
-      "content": "test test",
+      "title": "Iure duis aperiam is",
+      "content": "Pariatur Labore ali",
+      "userId": "5",
       "id": 3
+    },
+    {
+      "title": "Qui in distinctio I",
+      "content": "Officiis numquam qui",
+      "userId": "5",
+      "id": 4
+    },
+    {
+      "title": "Ratione aut placeat",
+      "content": "Lorem aliquip est et",
+      "userId": "5",
+      "id": 5
     }
   ],
   "fiches": [

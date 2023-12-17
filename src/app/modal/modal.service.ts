@@ -8,7 +8,7 @@ import {
 import { Subject } from 'rxjs';
 import { ModalComponent } from './modal.component';
 
-export type ModalVariant = 'ajout-fiche' | 'list-modal';
+export type ModalVariant = 'ajout-fiche' | 'list-modal' | 'ajout-article';
 
 @Injectable({
   providedIn: 'root',
@@ -35,22 +35,31 @@ export class ModalService {
     modalComponent.instance.title = options?.title;
     modalComponent.instance.variant = options?.variant || 'ajout-fiche';
     modalComponent.instance.context = options?.context || {};
-    modalComponent.instance.closeEvent.subscribe(() => this.closeModal());
-    modalComponent.instance.closeEvent.subscribe(() => this.submitModal());
+    // modalComponent.instance.closeEvent.subscribe(() => this.closeModal());
+    // modalComponent.instance.closeEvent.subscribe(() => this.submitModal());
     modalComponent.hostView.detectChanges();
     this.document.body.appendChild(modalComponent.location.nativeElement);
     this.modalNotifier = new Subject();
     return this.modalNotifier?.asObservable();
   }
 
-  closeModal() {
+  closeModal(id: string) {
     if (this.componentSubscriber) {
       this.modalNotifier?.complete();
     }
+    const appModal = this.document
+      .querySelector('app-modal')
+      ?.remove() as unknown as Element[];
+    appModal?.forEach((appBar) => {
+      const modalChild = appBar.querySelector(`#${id}`);
+      if (modalChild) {
+        appBar.remove();
+      }
+    });
   }
 
-  submitModal() {
-    this.modalNotifier?.next('confirm');
-    this.closeModal();
-  }
+  // submitModal() {
+  //   this.modalNotifier?.next('confirm');
+  //   this.closeModal();
+  // }
 }

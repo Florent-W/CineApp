@@ -14,6 +14,7 @@ import { ListModalComponent } from './lists/list-modal/list-modal.component';
 import { ListContainerComponent } from './lists/list-container/list-container.component';
 import { UserFicheComponent } from './user-fiche/user-fiche.component';
 import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
+import { UserArticlesComponent } from './user-articles/user-articles.component';
 
 const routes: Routes = [
   {
@@ -22,10 +23,6 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: FichesComponent,
-      },
-      {
-        path: 'fiches',
         component: FichesComponent,
       },
       { path: 'articles', component: ArticlesComponent },
@@ -57,7 +54,7 @@ const routes: Routes = [
   },
   {
     path: 'ajoutArticle',
-    component: AjoutarticleComponent
+    component: AjoutarticleComponent,
   },
   {
     path: 'profil',
@@ -70,6 +67,10 @@ const routes: Routes = [
       {
         path: 'listes',
         component: ListContainerComponent,
+      },
+      {
+        path: 'articles',
+        component: UserArticlesComponent,
       },
     ],
   },
