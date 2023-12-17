@@ -11,6 +11,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleComponent } from './article/article.component';
 import { ListModalComponent } from './list-modal/list-modal.component';
+import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'ajoutFiche',
     component: AjoutficheComponent,
+  },
+  {
+    path: 'ajoutArticle',
+    component: AjoutarticleComponent
   },
   {
     path: 'profil',

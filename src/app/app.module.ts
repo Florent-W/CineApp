@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SafeUrlPipe } from './pipes/safeurl.pipe';
 import { ArticleComponent } from './article/article.component';
 import { ListModalComponent } from './list-modal/list-modal.component';
+import { AjoutarticleComponent } from './ajoutarticle/ajoutarticle.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ListModalComponent } from './list-modal/list-modal.component';
     DashboardComponent,
     SafeUrlPipe,
     ArticleComponent,
-    ListModalComponent
+    ListModalComponent,
+    AjoutarticleComponent
   ],
   imports: [
     BrowserModule,

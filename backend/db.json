@@ -2,13 +2,18 @@
   "articles": [
     {
       "id": 1,
-      "titre": "Test",
-      "contenu": "bbbbbbbbbbbbbbbbb"
+      "title": "Test",
+      "content": "bbbbbbbbbbbbbbbbb"
     },
     {
       "id": 2,
-      "titre": "Test2",
-      "contenu": "ccccccccccc"
+      "title": "Test2",
+      "content": "ccccccccccc"
+    },
+    {
+      "title": "Test",
+      "content": "test test",
+      "id": 3
     }
   ],
   "fiches": [
@@ -26,17 +31,12 @@
         {
           "idUtilisateur": 5,
           "note": 5,
-          "commentaire": "Film Genial"
+          "commentaire": "Série Genial"
         },
         {
           "idUtilisateur": 3,
           "note": 3,
           "commentaire": "Bon premier épisode"
-        },
-        {
-          "idUtilisateur": 3,
-          "note": 2,
-          "commentaire": "a"
         }
       ],
       "synopsis": "Quand le monde tel que vous le connaissiez n'existe plus, quand la ligne entre le bien et le mal devient floue, quand la mort se manifeste au quotidien, jusqu'où iriez-vous pour survivre ? Pour Joel, la survie est une préoccupation quotidienne qu'il gère à sa manière. Mais quand son chemin croise celui d'Ellie, leur voyage à travers ce qui reste des États-Unis va mettre à rude épreuve leur humanité et leur volonté de survivre.\n\nL'adaptation du jeu vidéo The Last Of Us en série.",
@@ -110,31 +110,6 @@
       "id": 6
     },
     {
-      "title": "Ma nouvelle fiche avec Refecth",
-      "image": "https://placehold.co/150x225",
-      "category": "Série",
-      "duration": 6,
-      "firstAired": "2023-12-14",
-      "userId": 2,
-      "genres": [
-        "Comédie",
-        "Drame"
-      ],
-      "platforms": "netflix",
-      "id": 9,
-      "notes": [
-        {
-          "idUtilisateur": 3,
-          "note": 3,
-          "commentaire": "b"
-        },
-        {
-          "note": 2,
-          "commentaire": "b"
-        }
-      ]
-    },
-    {
       "title": "Man of steel",
       "synopsis": "Un petit garçon découvre qu'il possède des pouvoirs surnaturels et qu'il n'est pas né sur Terre. Plus tard, il s'engage dans un périple afin de comprendre d'où il vient et pourquoi il a été envoyé sur notre planète. Mais il devra devenir un héros s'il veut sauver le monde de la destruction totale et incarner l'espoir pour toute l'humanité.",
       "trailerUrl": "https://www.youtube.com/watch?v=wArmHSPIvlQ",
@@ -180,39 +155,389 @@
       "id": 12
     },
     {
-      "title": "Lorem esse consequa",
-      "synopsis": "Ducimus est digniss",
-      "trailerUrl": "Tempor consequatur ",
-      "image": "Dignissimos voluptat",
+      "id": 15,
+      "title": "Batman: The Dark Knight",
       "category": "Film",
-      "duration": 13,
-      "firstAired": "2008-12-29",
-      "genres": [
-        "Comédie",
-        "Romance",
-        "Aventure",
-        "Animation",
-        "Comédie romantique"
+      "duration": "152 min",
+      "firstAired": "18 juillet 2008",
+      "genres": "Action, Drame, Super Héros",
+      "platforms": "HBO Max, Netflix",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/63/97/89/18949761.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 7,
+          "note": 5,
+          "commentaire": "Meilleur film Batman!"
+        },
+        {
+          "idUtilisateur": 8,
+          "note": 4,
+          "commentaire": "Incroyable performance de Heath Ledger"
+        }
       ],
-      "platforms": "Minus officia fugit",
-      "id": 13
+      "synopsis": "Quand Batman, le commissaire Gordon et le procureur de district continuent à démanteler la pègre qui infeste Gotham City, une nouvelle menace surgit.",
+      "trailerUrl": "https://www.youtube.com/watch?v=LDG9bisJEaI"
     },
     {
-      "title": "Ullamco repellendus",
-      "synopsis": "Proident deserunt m",
-      "trailerUrl": "Occaecat ut maiores ",
-      "image": "Eveniet ipsum reru",
-      "category": "Série",
-      "duration": 45,
-      "firstAired": "2011-07-31",
-      "genres": [
-        "Comédie",
-        "Romance",
-        "Mystère"
+      "id": 12,
+      "title": "Avengers: Endgame",
+      "category": "Film",
+      "duration": "181 min",
+      "firstAired": "2019-04-26",
+      "genres": "Action, Sci-Fi",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/19/04/04/09/04/0472053.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
       ],
-      "platforms": "Necessitatibus aliqu",
-      "userId": "5",
-      "id": 14
+      "synopsis": "Le Titan Thanos, ayant réussi à s'approprier les six Pierres d'Infinité et à les réunir sur le Gantelet doré, a pu réaliser son objectif de pulvériser la moitié de la population de l'Univers. Cinq ans plus tard, Scott Lang, alias Ant-Man, parvient à s'échapper de la dimension subatomique où il était coincé. Il propose aux Avengers une solution pour faire revenir à la vie tous les êtres disparus, dont leurs alliés et coéquipiers : récupérer les Pierres d'Infinité dans le passé.",
+      "trailerUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+    },
+    {
+      "id": 13,
+      "title": "Avatar",
+      "category": "Film",
+      "duration": "162 min",
+      "firstAired": "2009-12-18",
+      "genres": "Action, Adventure",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img2.acsta.net/c_310_420/pictures/22/08/25/09/04/2146702.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des pilotes humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.",
+      "trailerUrl": "https://www.youtube.com/watch?v=5PSNL1qE6VY"
+    },
+    {
+      "id": 14,
+      "title": "Titanic",
+      "category": "Film",
+      "duration": "195 min",
+      "firstAired": "1997-12-19",
+      "genres": "Drama, Romance",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/23/01/10/16/06/0622119.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Southampton, 10 avril 1912. Le paquebot le plus grand et le plus moderne du monde, réputé pour son insubmersibilité, le Titanic, appareille pour son premier voyage. Quatre jours plus tard, il heurte un iceberg. A son bord, un artiste pauvre et une grande bourgeoise tombent amoureux.",
+      "trailerUrl": "https://www.youtube.com/watch?v=CHekzSiZjrY"
+    },
+    {
+      "id": 15,
+      "title": "Star Wars: The Force Awakens",
+      "category": "Film",
+      "duration": "138 min",
+      "firstAired": "2015-12-18",
+      "genres": "Action, Adventure",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img2.acsta.net/c_310_420/pictures/15/10/18/18/56/052074.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Plus de 30 ans après la bataille d'Endor, la galaxie n'en a pas fini avec la tyrannie et l'oppression. Les membres de l'Alliance rebelle, devenus la Résistance, combattent les vestiges de l'Empire réunis sous la bannière du Premier Ordre. Un mystérieux guerrier, Kylo Ren, semble vouer un culte à Dark Vador.",
+      "trailerUrl": "https://www.youtube.com/watch?v=sGbxmsDFVnE"
+    },
+    {
+      "id": 16,
+      "title": "Avengers: Infinity War",
+      "category": "Film",
+      "duration": "149 min",
+      "firstAired": "2018-04-27",
+      "genres": "Action, Sci-Fi",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img3.acsta.net/c_310_420/pictures/18/03/16/14/42/0611719.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Alors que les Avengers et leurs alliés ont continué de protéger le monde face à des menaces bien trop grandes pour être combattues par un héros seul, un nouveau danger est venu de l'espace : Thanos. Despote craint dans tout l'univers, Thanos a pour objectif de recueillir les six Pierres d'Infinité, des artefacts parmi les plus puissants de l'univers, et de les utiliser afin d'imposer sa volonté sur toute la réalité. Tous les combats que les Avengers ont menés culminent dans cette bataille.",
+      "trailerUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+    },
+    {
+      "id": 17,
+      "title": "Jurassic World",
+      "category": "Film",
+      "duration": "124 min",
+      "firstAired": "2015-06-12",
+      "genres": "Action, Adventure",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/15/04/30/15/10/422000.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "L'île Nublar accueille maintenant un parc thématique complètement fonctionnel sur les dinosaures, appelé Jurassic World. Après dix ans d'opération et un nombre de visiteurs en chute libre, une nouvelle attraction est créée dans le but d'attirer d'autres curieux, mais les résultats ne sont pas exactement ceux auxquels l'organisation s'attendait.      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=RFinNxS5KN4"
+    },
+    {
+      "id": 18,
+      "title": "The Lion King",
+      "category": "Film",
+      "duration": "118 min",
+      "firstAired": "2019-07-19",
+      "genres": "Adventure, Drama",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/pictures/19/02/25/12/06/2908996.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Au fond de la savane africaine, tous les animaux célèbrent la naissance de Simba, leur futur roi. Les mois passent. Simba idolâtre son père, le roi Mufasa, qui prend à cœur de lui faire comprendre les enjeux de sa royale destinée. Mais tout le monde ne semble pas de cet avis.      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=7TavVZMewpY"
+    },
+    {
+      "id": 19,
+      "title": "The Avengers",
+      "category": "Film",
+      "duration": "143 min",
+      "firstAired": "2012-05-04",
+      "genres": "Action, Adventure",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/85/31/58/20042068.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Lorsque Nick Fury, le directeur du S.H.I.E.L.D., l'organisation qui préserve la paix au plan mondial, cherche à former une équipe de choc pour empêcher la destruction du monde, Iron Man, Hulk, Thor, Captain America, Hawkeye et Black Widow répondent présents.vLes Avengers ont beau constituer la plus fantastique des équipes, il leur reste encore à apprendre à travailler ensemble, et non les uns contre les autres, d'autant que le redoutable Loki a réussi à accéder au Cube Cosmique et à son pouvoir illimité...",
+      "trailerUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8"
+    },
+    {
+      "id": 20,
+      "title": "Fast and Furious 7",
+      "category": "Film",
+      "duration": "137 min",
+      "firstAired": "2015-04-03",
+      "genres": "Action, Thriller",
+      "platforms": "Canal+",
+      "image": "https://fr.web.img5.acsta.net/c_310_420/pictures/15/02/09/15/57/551764.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Cette fois la menace prend les traits d'un tueur à gages des opérations spéciales britanniques aussi insaisissable qu'impitoyable, qui n'a d'obsession que la vengeance.      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=Skpu5HaVkOc"
+    },
+    {
+      "id": 21,
+      "title": "La Reine des Neiges II",
+      "category": "Film",
+      "duration": "103 min",
+      "firstAired": "2019-11-22",
+      "genres": "Animation, Adventure",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img5.acsta.net/c_310_420/pictures/19/10/25/15/08/5952325.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Incredible movie!"
+        }
+      ],
+      "synopsis": "Pourquoi Elsa est-elle née avec des pouvoirs magiques ? La jeune fille rêve de l’apprendre, mais la réponse met son royaume en danger. Avec l’aide d’Anna, Kristoff, Olaf et Sven, Elsa entreprend un voyage aussi périlleux qu’extraordinaire. Dans La Reine des neiges, Elsa craignait que ses pouvoirs ne menacent le monde. Dans La Reine des neiges 2, elle espère qu’ils seront assez puissants pour le sauver…      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=Zi4LMpSDccc"
+    },
+    {
+      "id": 22,
+      "title": "Game of Thrones",
+      "category": "Série",
+      "duration": "57 min",
+      "firstAired": "2011-04-17",
+      "genres": "Drama, Fantasy",
+      "platforms": "HBO Max",
+      "image": "https://fr.web.img3.acsta.net/c_310_420/pictures/23/01/03/14/13/0717778.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "Il y a très longtemps, à une époque oubliée, une force a détruit l'équilibre des saisons. Dans un pays où l'été peut durer plusieurs années et l'hiver toute une vie, des forces sinistres et surnaturelles se pressent aux portes du Royaume des Sept Couronnes. La confrérie de la Garde de Nuit, protégeant le Royaume de toute créature pouvant provenir d'au-delà du Mur protecteur, n'a plus les ressources nécessaires pour assurer la sécurité de tous. Après un été de dix années, un hiver rigoureux s'abat sur le Royaume avec la promesse d'un avenir des plus sombres. Pendant ce temps, complots et rivalités se jouent sur le continent pour s'emparer du Trône de Fer, le symbole du pouvoir absolu.      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=aAF12LNAeNI"
+    },
+    {
+      "id": 23,
+      "title": "Breaking Bad",
+      "category": "Série",
+      "duration": "47 min",
+      "firstAired": "2008-01-20",
+      "genres": "Crime, Drama",
+      "platforms": "Netflix",
+      "image": "https://fr.web.img3.acsta.net/c_310_420/pictures/19/06/18/12/11/3956503.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "Walter White, 50 ans, est professeur de chimie dans un lycée du Nouveau-Mexique. Pour subvenir aux besoins de Skyler, sa femme enceinte, et de Walt Junior, son fils handicapé, il est obligé de travailler doublement. Son quotidien déjà morose devient carrément noir lorsqu'il apprend qu'il est atteint d'un incurable cancer des poumons. Les médecins ne lui donnent pas plus de deux ans à vivre. Pour réunir rapidement beaucoup d'argent afin de mettre sa famille à l'abri, Walter ne voit plus qu'une solution : mettre ses connaissances en chimie à profit pour fabriquer et vendre du crystal meth, une drogue de synthèse qui rapporte beaucoup. Il propose à Jesse, un de ses anciens élèves devenu un petit dealer de seconde zone, de faire équipe avec lui. Le duo improvisé met en place un labo itinérant dans un vieux camping-car. Cette association inattendue va les entraîner dans une série de péripéties tant comiques que pathétiques.",
+      "trailerUrl": "https://www.youtube.com/watch?v=HhesaQXLuRY&pp=ygUUYnJlYWtpbmcgYmFkIHRyYWlsZXI%3D"
+    },
+    {
+      "id": 24,
+      "title": "Stranger Things",
+      "category": "Série",
+      "duration": "51 min",
+      "firstAired": "2016-07-15",
+      "genres": "Drama, Fantasy, Horror",
+      "platforms": "Netflix",
+      "image": "https://fr.web.img2.acsta.net/c_310_420/pictures/22/05/18/14/31/5186184.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "A Hawkins, en 1983 dans l'Indiana. Lorsque Will Byers disparaît de son domicile, ses amis se lancent dans une recherche semée d’embûches pour le retrouver. Dans leur quête de réponses, les garçons rencontrent une étrange jeune fille en fuite. Les garçons se lient d'amitié avec la demoiselle tatouée du chiffre 11 sur son poignet et au crâne rasé et découvrent petit à petit les détails sur son inquiétante situation. Elle est peut-être la clé de tous les mystères qui se cachent dans cette petite ville en apparence tranquille…      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=b9EkMc79ZSU"
+    },
+    {
+      "id": 25,
+      "title": "The Witcher",
+      "category": "Série",
+      "duration": "60 min",
+      "firstAired": "2019-12-20",
+      "genres": "Action, Adventure, Drama",
+      "platforms": "Various",
+      "image": "https://fr.web.img5.acsta.net/c_310_420/pictures/19/12/12/12/13/2421997.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "Le sorceleur Geralt, un chasseur de monstres mutant, se bat pour trouver sa place dans un monde où les humains se révèlent souvent plus vicieux que les bêtes.",
+      "trailerUrl": "https://www.youtube.com/watch?v=ndl1W4ltcmg"
+    },
+    {
+      "id": 26,
+      "title": "The Mandalorian",
+      "category": "Série",
+      "duration": "40 min",
+      "firstAired": "2019-11-12",
+      "genres": "Action, Adventure, Sci-Fi",
+      "platforms": "Disney+",
+      "image": "https://fr.web.img3.acsta.net/c_310_420/pictures/23/02/02/08/50/0382923.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "Après les aventures de Jango et Boba Fett, un nouveau héros émerge dans l'univers Star Wars. L'intrigue, située entre la chute de l'Empire et l'émergence du Premier Ordre, suit les voyages d'un chasseur de primes solitaire dans les contrées les plus éloignées de la Galaxie, loin de l’autorité de la Nouvelle République.",
+      "trailerUrl": "https://www.youtube.com/watch?v=aOC8E8z_ifw"
+    },
+    {
+      "id": 27,
+      "title": "The Crown",
+      "category": "Série",
+      "duration": "58 min",
+      "firstAired": "2016-11-04",
+      "genres": "Biography, Drama, History",
+      "platforms": "Netflix",
+      "image": "https://fr.web.img2.acsta.net/c_310_420/pictures/23/10/26/11/17/0715878.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "La série se concentre sur la Reine Elizabeth II, alors âgée de 25 ans et confrontée à la tâche démesurée de diriger la plus célèbre monarchie du monde tout en nouant des relations avec le légendaire premier ministre Sir Winston Churchill. L’empire britannique est en déclin, le monde politique en désarroi… une jeune femme monte alors sur le trône, à l’aube d’une nouvelle ère.      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=JWtnJjn6ng0"
+    },
+    {
+      "id": 28,
+      "title": "Black Mirror",
+      "category": "Série",
+      "duration": "60 min",
+      "firstAired": "2011-12-04",
+      "genres": "Drama, Sci-Fi, Thriller",
+      "platforms": "Netflix",
+      "image": "https://fr.web.img5.acsta.net/c_310_420/pictures/23/05/24/11/22/4785740.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "Chaque épisode de cette anthologie montre la dépendance des hommes vis-à-vis de tout ce qui a un écran...",
+      "trailerUrl": "https://www.youtube.com/watch?v=V0XOApF5nLU"
+    },
+    {
+      "id": 29,
+      "title": "Westworld",
+      "category": "Série",
+      "duration": "62 min",
+      "firstAired": "2016-10-02",
+      "genres": "Drama, Mystery, Sci-Fi",
+      "platforms": "HBO Max",
+      "image": "https://fr.web.img4.acsta.net/c_310_420/pictures/23/01/06/14/58/5375495.jpg",
+      "userId": 5,
+      "notes": [
+        {
+          "idUtilisateur": 5,
+          "note": 5,
+          "commentaire": "Outstanding series!"
+        }
+      ],
+      "synopsis": "À Westworld, un parc d'attractions dernier cri, les visiteurs paient des fortunes pour revivre le frisson de la conquête de l'Ouest. Dolores, Teddy et bien d'autres sont des androïdes à apparence humaine créés pour donner l'illusion et offrir du dépaysement aux clients. Pour ces derniers, Westworld est l'occasion de laisser libre cours à leurs fantasmes. Cet univers bien huilé est mis en péril lorsqu'à la suite d'une mise à jour, quelques robots commencent à adopter des comportements imprévisibles, voire erratiques. En coulisses, l'équipe, qui tire les ficelles de ce monde alternatif, s'inquiète de ces incidents de plus en plus nombreux. Les enjeux du programme Westworld étant énormes, la Direction ne peut se permettre une mauvaise publicité qui ferait fuir ses clients. Que se passe-t-il réellement avec les androïdes réencodés ?      ",
+      "trailerUrl": "https://www.youtube.com/watch?v=kEkZdgWu7mM"
     }
   ],
   "users": [
@@ -232,6 +557,7 @@
       "username": "Florent",
       "password": "test",
       "email": "test@gmail.com",
+      "imageUrl":"https://wiki.tf2classic.com/w/images/6/6a/Pyro_RED.png",
       "id": 3,
       "statut": "utilisateur"
     },
@@ -247,6 +573,7 @@
       "username": "abdoula",
       "password": "azertyuiop",
       "id": 5,
+      "imageUrl":"https://cdn-s-www.leprogres.fr/images/9F7F92CC-14E8-4BED-A17E-BC2BFEE33A35/MF_contenu/pourquoi-l-ol-a-(legerement)-change-son-logo-1656697931.jpg",
       "statut": "utilisateur"
     },
     {
