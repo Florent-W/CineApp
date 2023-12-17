@@ -83,8 +83,6 @@ export class AjoutficheComponent {
   }
 
   get getErrorLabel() {
-    console.log('test')
-    console.log(this.ficheForm);
     if (this.ficheForm.get('title')?.errors?.["required"]) {
       return 'Le titre est obligatoire';
     }
@@ -93,6 +91,15 @@ export class AjoutficheComponent {
     }
     if (this.ficheForm.get('trailerUrl')?.errors?.["required"]) {
       return 'Le trailer est obligatoire';
+    }
+    if (this.ficheForm.get('image')?.errors?.["required"]) {
+      return 'L image est obligatoire';
+    }
+    if (this.ficheForm.get('category')?.errors?.["required"]) {
+      return 'Le trailer est obligatoire';
+    } 
+    if (this.ficheForm.get('duration')?.errors?.["required"]) {
+      return 'La durée est obligatoire';
     }
   
     return 'Un problème est survenu';
