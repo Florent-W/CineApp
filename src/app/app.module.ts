@@ -53,7 +53,7 @@ import { UserArticlesComponent } from './user-articles/user-articles.component';
     AjoutarticleComponent,
     TriPipe,
     TooltipDirective,
-    ThemecolorDirective
+    ThemecolorDirective,
     UserArticlesComponent,
   ],
   imports: [

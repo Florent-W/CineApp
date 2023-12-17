@@ -53,16 +53,16 @@ export class HeaderComponent implements OnInit {
   changeTheme(newTheme: string) {
     const userId = parseInt(this.authService.getSavedUser()!, 10);
 
-    // Mettez à jour le thème via le service de l'utilisateur
     this.utilisateursService.updateUserTheme(userId, newTheme).subscribe(
       () => {
-        // Mettez à jour le thème localement après la mise à jour réussie
         this.theme = newTheme;
       },
       error => {
         console.error('Erreur lors de la mise à jour du thème :', error);
       }
     );
+  }
+
   ajouterUneFiche() {
     this.modalService.openModal({
       title: 'Ajouter une nouvelle fiche',

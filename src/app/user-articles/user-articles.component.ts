@@ -5,7 +5,7 @@ import { Article, ArticlesService } from '../shared/services/articles.service';
 @Component({
   selector: 'app-user-articles',
   templateUrl: './user-articles.component.html',
-  styleUrl: './user-articles.component.scss',
+  styleUrls: ['./user-articles.component.scss'],
 })
 export class UserArticlesComponent implements OnInit {
   constructor(
